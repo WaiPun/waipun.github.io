@@ -702,10 +702,11 @@ function myFunction() {
 /*<button onclick="SaveArrival()">Save</button>*/
 function SaveArrival(){
 if (typeof(Storage) !== "undefined") {
-  for (i = 1; i < 321; i++) {
+  for (i = 315; i < 321; i++) {
   var t, checked
   t = 't'+i
   checked = document.getElementById(t).checked;
+  alert(t +' ' +checked);
   localStorage.setItem(i,checked)}
   alert("Saved");
 } else {
@@ -717,17 +718,16 @@ if (typeof(Storage) !== "undefined") {
 
 /*<button onclick="Retrieve()">Retrieve</button>*/
 function Retrieve(){
+var t, checked
 if (typeof(Storage) !== "undefined") {
-  for (i = 1; i < 321; i++) {
-  var t, checked
+  for (i = 315; i < 321; i++) {
   t = 't'+i
   checked = localStorage.getItem(i)
+  alert(checked);
   if (checked == 'true'){document.getElementById(t).checked = true}else{
   document.getElementById(t).checked = false}
-  /*document.getElementById(t).checked = localStorage.getItem(i);*/
-  drawChart()
-
   }
+  drawChart();
   alert("Retrieved")
 } else {
   alert("Not Supported")
