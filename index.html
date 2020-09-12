@@ -1,99 +1,189 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
   box-sizing: border-box;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
+body {
+  background-color: #fff0f8;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(53, 8, 8);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid rgb(217, 11, 69);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(216, 79, 79);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(255, 255, 255);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.contentm {
+  padding: 20px 30px;
+  background-color: rgba(161, 194, 255, 0.884);
+  position: relative;
+  border-radius: 6px;
+}
+
+.contentf {
+  padding: 20px 30px;
+  background-color: rgba(236, 156, 135, 0.664);
+  position: relative;
+  border-radius: 6px;
+}
+
+.contentall {
+  padding: 20px 30px;
+  background-color: rgba(201, 243, 227, 0.89);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
   width: 100%;
-  font-size: 18px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
 
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
 }
-
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-
-}
-
-#myTable td:nth-child(1) {
-    display: none;
-}
-
-#myTable td:nth-child(8) {
-    display: none;
-}
-
-#myTable th:nth-child(1) {
-    display: none;
-}
-
-
-
-#myTable tr:nth-child(even){background-color: #ebfafa;}
-
-#myTable tr:hover {background-color: #ddd;}
-
-#myTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #33cccc;
-  color: white;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
-}
-
-h2{font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;}
-
 </style>
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {
-            packages: ['corechart']
-        });
-    </script>
-
 </head>
+<body>
 
-
-
-
-
-<body bgcolor= "#ffffff">
-
-
-
-
-
-
-
-
-
-<iframe src="https://www.google.com/maps/d/embed?mid=1rIIqNrQvirxmfKH7ISJTJm5Q5VYKdGkG" width="80%" height="800"></iframe>
-
-
-
-
+<div class="timeline">
+  <div class="container right"><div class = "contentf"><h>05:00</h><p>新娘, 姊妹及媽媽化妝</p> <p>新娘子(早上裙褂造型預2小時30Mins), 媽媽, 姊妹 2位 (二妹、三妹）</p> <p>派利是給化妝師</p> <p>5:00 AM化妝師到達</p> <p>褂，褂鞋，紅色睡衣化妝（找化妝尾數 + 的士費)</p></div></div>
+  <div class="container right"><div class = "contentf"><h>05:00</h><p>姊妹到女家集合</p> <p>姊妹 2位 （Tina、kaling）: 6:00am 到 </p></div></div>
+  <div class="container right"><div class = "contentf"><h>05:00</h><p>姐妹開始輪流化妝／ set頭／戴手花 （每個人預40-45mins），食早餐</p> <p>姊妹, (化妝師)</p> <p>[Tina] 聯絡攝影師 & Videog[Kaling]要預備敬茶用品 &煲水 (將蓮子、紅棗預先用熱水浸軟)[二妹] 準備佈置[三妹] 點算好要帶備的物件</p></div></div>
+  <div class="container right"><div class = "contentf"><h>07:30</h><p>派利是給攝影師</p> <p>7:30 AM攝影師到達 , 安排化妝師由女家到男家</p> <p>攝影師（找攝影尾數 + 的士費)</p></div></div>
+  <div class="container left"><div class = "contentm"><h>07:30</h><p>上花車到旺角</p> <p>新郎+benji </p> <p>出發前要記得帶:1) ID Card、八達通2) 開門利是 & 一整日費用3) 花球4) 兄弟利是5) 花車佈置</p></div></div>
+  <div class="container right"><div class = "contentf"><h>07:30</h><p>攝影師拍攝新娘及姐妹花絮 (45 分鐘)</p> <p>攝影師, 外父外母, 姊妹</p> <p>著褂儀式 + 新娘派利是給姊妹</p></div></div>
+  <div class="container right"><div class = "contentf"><h>08:00</h><p>新娘屋企人及親人到達女家</p> <p>新娘屋企人, 女家親戚</p></div></div>
+  <div class="container left"><div class = "contentm"><h>08:00</h><p>兄弟 & 新郎到旺角Crodis集合聯絡攝影師, 化妝師</p> <p>新郎哥, 兄弟</p> <p>Benji 跟車, 其他兄弟自己</p> <p>戴褒呔, 吊帶</p></div></div>
+  <div class="container left"><div class = "contentall"><h>08:00</h><p>兄弟佈置花車新郎化妝時間15-20分鐘</p> <p>新郎哥, 兄弟</p></div></div>
+  <div class="container left"><div class = "contentm"><h>08:00</h><p>男家屋企人始化妝及set頭</p> <p>化妝師 (男家化妝師)</p></div></div>
+  <div class="container left"><div class = "contentm"><h>08:30</h><p>攝影師拍攝新郎及兄弟花絮 (30 分鐘)</p> <p>攝影師, 新郎, 兄弟</p> <p>新郎派利是給攝影師／兄弟</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:00</h><p>到達女家門外</p> <p>新郎哥, 兄弟</p> <p>討開門利是、愛的宣言</p> <p>花球、開門利是</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:15</h><p>接新娘儀式 和 預備敬茶儀式</p> <p>奉茶, 茶水部</p> <p>斟茶用具(瓷壺&杯)雙喜紙杯x1 pack跪墊x2雙喜地毯熱茶 (普洱茶)蓮子紅棗紅繩Label敬茶金器表, 筆</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:15</h><p>向新娘長輩敬茶</p> <p>新娘屋企人</p> <p>進行敬茶儀式:1) 嫲嫲 2)新娘爸媽 3) 叔叔嬸嬸 </p> <p>[二妹] 先Mark 金器同影相, 收好金器同Mark利是[三妹] 協助帶金器 ＋穿起金器[Kaling] 預備10杯茶 (每杯茶放一雙蓮子和一雙紅棗), 洗杯/抹杯/紅紙杯[Tina] 遞茶、奉茶 、講好說話</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:15</h><p>收拾物品</p> <p>兄弟姊妹</p> <p>(Checklist)</p> <p>[二妹、三妹、Kaling] 收拾及拎敬茶用品[Tina] 通知兄弟準備出門花車 [Benji, Kingman] 聯絡 28座司機, 幫手執野上車</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:30</h><p>女家屋企人合照 + 親戚大合照</p> <p>新娘屋企人 + 親戚</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:45</h><p>新人出門、兄弟姊妹團離開女家</p> <p>KEEP金器</p> <p>最後 Final Check新娘, 新娘爸爸帶身份証</p> <p>[Tina] 拿紅傘、跟花車 [Kaling] 灑米 [二妹、三妹] 執拾物品放上車、不跟車、直接帶同女家親友11:00左右到會場</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:45</h><p>擔紅遮, 花灑米</p></div></div>
+  <div class="container left"><div class = "contentall"><h>09:45</h><p>新人、兄弟姊妹在女家樓下影大合照</p> <p>新人, 兄弟姊妹</p></div></div>
+  <div class="container left"><div class = "contentall"><h>10:00</h><p>花車行大運 (出發到男家)</p> <p>花車司機, 新人, 兄弟姊妹</p> <p>拍攝上車花絮</p> <p>化妝/一姊妹跟花車其他人上28座</p></div></div>
+  <div class="container left"><div class = "contentall"><h>10:30</h><p>新人入門</p> <p>［Tina, kaling, Jonathan, Ka Chun］落車到男家 </p></div></div>
+  <div class="container left"><div class = "contentall"><h>10:35</h><p>(到男家) 預備敬茶用品</p> <p>奉茶, 茶水部</p> <p>將蓮子、紅棗預先用熱水浸軟</p></div></div>
+  <div class="container left"><div class = "contentall"><h>10:35</h><p>向新郎長輩敬茶</p> <p>新郎屋企人</p> <p>進行敬茶儀式: 老爺奶奶、Andy&Carol</p> <p>[Kaling] 先Mark 金器同影相, 收好金器同Mark利是，協助帶金器 ＋穿起金器[Tina] 預備10杯茶 (每杯茶放一雙蓮子和一雙紅棗), 洗杯/抹杯/紅紙杯[Tina] 遞茶、奉茶 、講好說話</p></div></div>
+  <div class="container left"><div class = "contentall"><h>11:00</h><p>男家屋企人合照 + 親戚大合照</p> <p>新郎屋企人 + 親戚</p></div></div>
+  <div class="container left"><div class = "contentall"><h>11:00</h><p>在男家點齊物資 + 運送到車+ 新娘換便服</p> <p>兄弟姊妹</p> <p>(Checklist) + final check (點金器)</p> <p>(提多次帶新郎,新郎媽媽身份証/ 帶結婚介子)</p></div></div>
+  <div class="container left"><div class = "contentall"><h>11:30</h><p>到達會場</p> <p>新郎,新娘,兄弟姊妹, 攝影師, 化妝師</p> <p>物品放去新娘房</p> <p>[二妹、三妹] 貼喜字貼in new room + 新娘房 Key Keeper[二妹] 放金器入夾萬、改密碼"[Kingman, Benji] 要幫手搬野去會場, 到會場幫手打點一下佈置</p></div></div>
+  
+    
+</div>
 
 </body>
 </html>
