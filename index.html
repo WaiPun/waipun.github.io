@@ -1,74 +1,359 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  <style>
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+    #SearchBar {
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 60%;
+      font-size: 12px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+    #QTable td:nth-child(1) {display: none;}
+    #SQTable td:nth-child(1) {display: none;}
+    #SSQTable td:nth-child(0) {display: none;}
+    #SSSQTable td:nth-child(0) {display: none;}
+    #EQTable td:nth-child(0) {display: none;}
+
+
+
+
+    /* Style the buttons */
+     /* Topic level  */
+    .btnT {
+      border: none;
+      outline: none;
+      padding: 6px 2px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      width: 150px;
+      font-family: Segoe UI;
+    }
+    .btnT:hover {
+      background-color: #ddd;
+    }
+    .btnT.active {
+      background-color: #666;
+      color: white;
+    }
+
+    .btnQ {
+      border: none;
+      outline: none;
+      padding: 6px 2px;
+      background-color:lightblue;
+      cursor: pointer;
+      width: 150px;
+      font-family: Segoe UI;
+    }
+    .btnQ:hover {
+      background-color: #ddd;
+    }
+    .btnQ.active {
+      background-color: #666;
+      color: white;
+    }
+
+
+    .btnSQ {
+      border: none;
+      outline: none;
+      padding: 6px 2px;
+      background-color:lightskyblue;
+      cursor: pointer;
+      width: 200px;
+      font-family: Segoe UI;
+    }
+    .btnSQ:hover {
+      background-color: #ddd;
+    }
+    .btnSQ.active {
+      background-color: #666;
+      color: white;
+    }
+
+    .btnSSQ {
+      border: none;
+      outline: none;
+      padding: 6px 2px;
+      background-color:lightblue;
+      cursor: pointer;
+      width: 250px;
+      font-family: Segoe UI;
+    }
+    .btnSSQ:hover {
+      background-color: #ddd;
+    }
+    .btnSSQ.active {
+      background-color: #666;
+      color: white;
+    }
+
+
+    .btnEQ {
+      border: none;
+      outline: none;
+      padding: 6px 2px;
+      background-color:lightblue;
+      cursor: pointer;
+      width: 350px;
+      font-family: Segoe UI;
+      font-size: 12px;
+    }
+    .btnEQ:hover {
+      background-color: #ddd;
+    }
+    .btnEQ.active {
+      background-color: #666;
+      color: white;
+    }
+
+    body{font-family: Segoe UI; font-size: 14px;}
+    /* width */
+    ::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 3px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(0, 0, 0); 
+      border-radius: 3px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #242424;
+      border-radius: 5px; 
+    }
+
+
+  </style>
 </head>
+
 <body>
+<h1>2020 S2 Life Insurance Application</h1>
+<h2>Directory</h2>
 
-<h2>HTML Table</h2>
+<div style="device-width; height:260px; overflow:auto;">
+  <table style = "display: inline">
+    <tr>
+      <td>
+        <!-- T level here -->
+        <div style="width:175px; height:250px; overflow:auto;">
+        <table style = "display: inline" id = "TTable">
+          <tr><td><button class="btnT" onclick = "loadPage('AM.html');">AM Rundown</button></td></tr>        
+        </table>
+        
+        </div>
+        <!-- T level finished -->
+      </td>
 
+      <td>
+        <!-- Query level here -->
+        <div style="width:175px; height:250px; overflow:auto;">
+          <table style = "display: inline" id = "QTable">
+            <tr><td>Commercial,History</td><td><button class="btnQ" onclick = "loadPage('PM.html');">PM Rundown</button></td></tr>
+          </table>
+          </div>
+          <!-- Quert level finished -->
+      </td>
+
+      <td>
+        <!-- Sub-query level here -->
+        <div style="width:250px; height:250px; overflow:auto;">
+          <table style = "display: inline" id = "SQTable">
+            <tr><td>Commercial,History</td><td><button class="btnQ" onclick = "loadPage('Contacts.html');">Contacts</button></td></tr>
+          </table>
+          </div>
+          <!-- Sub-query level finished -->
+      </td>
+
+
+
+
+
+    </tr>
+  </table> 
+
+
+
+</div>
+
+
+
+
+<!-- ExamQuery level here -->
 <table>
-  <tr><th>Role</th><th>Name</th><th>Phone</th></tr>
-  <tr><td>新 郎</td><td>潘煒謙</td><td><a herf ="tel:+85296671193">96671193</a></td></tr>
-  <tr><td>新 娘</td><td>曾佩敏</td><td><a herf ="tel:+85265714431">65714431</a></td></tr>
-  <tr><td>老爺</td><td></td><td><a herf ="tel:+85290385789">90385789</a></td></tr>
-  <tr><td>奶奶</td><td>潘太</td><td><a herf ="tel:+85293555230">93555230</a></td></tr>
-  <tr><td>外母</td><td>--</td><td><a herf ="tel:+85268454035">68454035</a></td></tr>
-  <tr><td>外父</td><td></td><td><a herf ="tel:+852"></a></td></tr>
-  
-  
-  
-  <tr><td>兄弟團</td><td>Benji</td><td><a herf ="tel:+85293289892">93289892</a></td></tr>
-  <tr><td>兄弟團</td><td>Ka Chun</td><td><a herf ="tel:+85292705080">92705080</a></td></tr>
-  <tr><td>兄弟團</td><td>文</td><td><a herf ="tel:+85260900394">60900394</a></td></tr>
-  <tr><td>兄弟團</td><td>Jon</td><td><a herf ="tel:+85262733151">62733151</a></td></tr>
-  
-  
-  
-  <tr><td>姊妹團</td><td>二妹</td><td><a herf ="tel:+85268513729">68513729</a></td></tr>
-  <tr><td>姊妹團</td><td>三妹</td><td><a herf ="tel:+85257034852">57034852</a></td></tr>
-  <tr><td>姊妹團</td><td>Tina</td><td><a herf ="tel:+85263710835">63710835</a></td></tr>
-  <tr><td>姊妹團</td><td>Kaling</td><td><a herf ="tel:+85267341077">67341077</a></td></tr>
-  
-  
-  
-  
-  
-  <tr><td>律師</td><td>伍律師</td><td><a herf ="tel:+85267599999">67599999</a></td></tr>
-  <tr><td>律師</td><td>Miss lam </td><td><a herf ="tel:+85265888477">65888477</a></td></tr>
-  <tr><td>攝影師</td><td>Kenny Tsang</td><td><a herf ="tel:+85293628365">93628365</a></td></tr>
-  <tr><td>化妝髮型師</td><td>Melody makeup</td><td><a herf ="tel:+85292022377">92022377</a></td></tr>
-  <tr><td>囍宴司儀</td><td>1 Louie</td><td><a herf ="tel:+85260370046">60370046</a></td></tr>
-  
-  <tr><td>花車司機</td><td>Sweet Concept</td><td><a herf ="tel:+852"></a></td></tr>
-  <tr><td>28座司機</td><td>Sweet Concept</td><td><a herf ="tel:+852"></a></td></tr>
-  <tr><td>旅遊巴司機</td><td>旅遊巴司機</td><td><a herf ="tel:+852"></a></td></tr>
-  
-  <tr><td>婚紗/禮服</td><td>Laputa</td><td><a herf ="tel:+85228844878">28844878</a></td></tr>
-  <tr><td>媽媽禮服</td><td>名掛</td><td><a herf ="tel:+85223097729">23097729</a></td></tr>
-  <tr><td>媽媽禮服</td><td>wtsapp</td><td><a herf ="tel:+85290450726">90450726</a></td></tr>
-  <tr><td>姊妹禮服</td><td>DreamWedding</td><td><a herf ="tel:+85265383831">65383831</a></td></tr>
-  <tr><td>花 </td><td></td><td><a herf ="tel:+852"></a></td></tr>
-  
-    
-    
+  <tr>
+    <td>
+      <iframe src="AM.html" height="600" width="650" id = "textArea"></iframe>
+    </td>
+  </tr>
 </table>
+
+<script>
+  function loadPage(text){
+    document.getElementById("textArea").src = text
+  }
+
+  function Search_query(){
+    Search_query_Q()
+    Search_query_SQ()
+    Search_query_SSQ()
+    Search_query_SSSQ()
+    Search_query_EQ()
+  }
+
+  function Search_query_Q() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SearchBar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("QTable");
+  tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (matching(txtValue, filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  } 
+
+  function Search_query_SQ() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SearchBar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("SQTable");
+  tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (matching(txtValue, filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function Search_query_SSQ() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SearchBar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("SSQTable");
+  tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (matching(txtValue, filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function Search_query_SSSQ() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SearchBar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("SSSQTable");
+  tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (matching(txtValue, filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function Search_query_EQ() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("SearchBar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("EQTable");
+  tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (matching(txtValue, filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function searchtext(txt){
+  document.getElementById("SearchBar").value = txt;
+  Search_query();
+  }
+
+  function matching(str, patt1) {
+
+  patt1 = patt1.toUpperCase();
+  str = str.toUpperCase();
+  patt1 = textSplit(patt1);
+
+  var count_matches = 0;
+  var result = "";
+  var i;
+
+  for (i = 0; i < patt1.length; i++) {
+    if(str.indexOf(patt1[i]) > -1){
+      count_matches = count_matches + 1;
+    }
+  }
+
+  var str_split = textSplit(str);
+  var result = 0;
+
+  if(count_matches == Math.min(patt1.length, str_split.length)){result = 1;}else{result = -1;}
+
+  return result;
+
+  }
+
+  function textSplit(txt){
+    txt = txt.replace(/[.|&|,]/g," ");
+    txt = txt.replace(/\s+/g," ");
+    txt = txt.split(" ");
+    txt = txt.filter(onlyUnique);
+    return txt
+  }
+
+  function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+  }
+</script>
+
+  
 
 </body>
 </html>
