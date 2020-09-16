@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <style>
 
     #SearchBar {
@@ -142,17 +143,16 @@
 </head>
 
 <body>
-<h1>2020 S2 Life Insurance Application</h1>
-<h2>Directory</h2>
+<h1>Joanna & Thomas 20 Sept 2020</h1>
 
-<div style="device-width; height:260px; overflow:auto;">
+<div style="width:device-width; height:40px; overflow:auto;">
   <table style = "display: inline">
     <tr>
       <td>
         <!-- T level here -->
-        <div style="width:175px; height:250px; overflow:auto;">
+        <div style="width:175px; height:40px; overflow:auto;">
         <table style = "display: inline" id = "TTable">
-          <tr><td><button class="btnT" onclick = "loadPage('AM.html');">AM Rundown</button></td></tr>        
+          <tr><td><button class="btnQ" onclick = "loadPage('AM.html');">AM Rundown</button></td></tr>        
         </table>
         
         </div>
@@ -161,7 +161,7 @@
 
       <td>
         <!-- Query level here -->
-        <div style="width:175px; height:250px; overflow:auto;">
+        <div style="width:175px; height:40px; overflow:auto;">
           <table style = "display: inline" id = "QTable">
             <tr><td>Commercial,History</td><td><button class="btnQ" onclick = "loadPage('PM.html');">PM Rundown</button></td></tr>
           </table>
@@ -171,36 +171,24 @@
 
       <td>
         <!-- Sub-query level here -->
-        <div style="width:250px; height:250px; overflow:auto;">
+        <div style="width:250px; height:40px; overflow:auto;">
           <table style = "display: inline" id = "SQTable">
             <tr><td>Commercial,History</td><td><button class="btnQ" onclick = "loadPage('Contacts.html');">Contacts</button></td></tr>
           </table>
           </div>
           <!-- Sub-query level finished -->
       </td>
-
-
-
-
-
     </tr>
+
+
   </table> 
 
 
-
 </div>
-
-
-
-
 <!-- ExamQuery level here -->
-<table>
-  <tr>
-    <td>
-      <iframe src="AM.html" height="600" width="650" id = "textArea"></iframe>
-    </td>
-  </tr>
-</table>
+
+<iframe src="AM.html" height="536" width="414" id = "textArea"></iframe>
+
 
 <script>
   function loadPage(text){
