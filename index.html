@@ -1,343 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-  <style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
 
-    #SearchBar {
-      background-position: 10px 10px;
-      background-repeat: no-repeat;
-      width: 60%;
-      font-size: 12px;
-      padding: 12px 20px 12px 40px;
-      border: 1px solid #ddd;
-      margin-bottom: 12px;
-    }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
 
-    #QTable td:nth-child(1) {display: none;}
-    #SQTable td:nth-child(1) {display: none;}
-    #SSQTable td:nth-child(0) {display: none;}
-    #SSSQTable td:nth-child(0) {display: none;}
-    #EQTable td:nth-child(0) {display: none;}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
 
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
 
-
-    /* Style the buttons */
-     /* Topic level  */
-    .btnT {
-      border: none;
-      outline: none;
-      padding: 6px 2px;
-      background-color: #f1f1f1;
-      cursor: pointer;
-      width: 150px;
-      font-family: Segoe UI;
-    }
-    .btnT:hover {
-      background-color: #ddd;
-    }
-    .btnT.active {
-      background-color: #666;
-      color: white;
-    }
-
-    .btnQ {
-      border: none;
-      outline: none;
-      padding: 6px 2px;
-      background-color:lightblue;
-      cursor: pointer;
-      width: 150px;
-      font-family: Segoe UI;
-    }
-    .btnQ:hover {
-      background-color: #ddd;
-    }
-    .btnQ.active {
-      background-color: #666;
-      color: white;
-    }
-
-
-    .btnSQ {
-      border: none;
-      outline: none;
-      padding: 6px 2px;
-      background-color:lightskyblue;
-      cursor: pointer;
-      width: 200px;
-      font-family: Segoe UI;
-    }
-    .btnSQ:hover {
-      background-color: #ddd;
-    }
-    .btnSQ.active {
-      background-color: #666;
-      color: white;
-    }
-
-    .btnSSQ {
-      border: none;
-      outline: none;
-      padding: 6px 2px;
-      background-color:lightblue;
-      cursor: pointer;
-      width: 250px;
-      font-family: Segoe UI;
-    }
-    .btnSSQ:hover {
-      background-color: #ddd;
-    }
-    .btnSSQ.active {
-      background-color: #666;
-      color: white;
-    }
-
-
-    .btnEQ {
-      border: none;
-      outline: none;
-      padding: 6px 2px;
-      background-color:lightblue;
-      cursor: pointer;
-      width: 350px;
-      font-family: Segoe UI;
-      font-size: 12px;
-    }
-    .btnEQ:hover {
-      background-color: #ddd;
-    }
-    .btnEQ.active {
-      background-color: #666;
-      color: white;
-    }
-
-    body{font-family: Segoe UI; font-size: 14px;}
-    /* width */
-    ::-webkit-scrollbar {
-      width: 3px;
-      height: 3px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey; 
-      border-radius: 3px;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: rgb(0, 0, 0); 
-      border-radius: 3px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #242424;
-      border-radius: 5px; 
-    }
-
-
-  </style>
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
 </head>
-
 <body>
-<h1>Joanna & Thomas 20 Sept 2020</h1>
-  <table style="width:100%">
-    <tr>
-      <td>
-        <!-- T level here -->
-        <div style="width:175px; height:40px; overflow:auto;">
-        <table style = "display: inline" id = "TTable">
-          <tr><td><button class="btnQ" onclick = "loadPage('AM.html');">AM Rundown</button></td></tr>        
-        </table>
-        
-        </div>
-        <!-- T level finished -->
-      </td>
 
-      <td>
-        <!-- Query level here -->
-        <div style="width:175px; height:40px; overflow:auto;">
-          <table style = "display: inline" id = "QTable">
-            <tr><td>Commercial,History</td><td><button class="btnQ" onclick = "loadPage('PM.html');">PM Rundown</button></td></tr>
-          </table>
-          </div>
-          <!-- Quert level finished -->
-      </td>
+<h2>Joanna & Thomas 20 Sept 2020</h2>
+<p>Thank You</p>
 
-      <td>
-        <!-- Sub-query level here -->
-        <div style="width:250px; height:40px; overflow:auto;">
-          <table style = "display: inline" id = "SQTable">
-            <tr><td>Commercial,History</td><td><button class="btnQ" onclick = "loadPage('Contacts.html');">Contacts</button></td></tr>
-          </table>
-          </div>
-          <!-- Sub-query level finished -->
-      </td>
-    </tr>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">AM Rundown</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">PM Rundowm</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Contacts</button>
+</div>
 
+<div id="London" class="tabcontent">
+    <iframe src="AM.html" style="height: 800px; width: 100%" id = "textArea" ></iframe>
+</div>
 
-  </table> 
+<div id="Paris" class="tabcontent">
+    <iframe src="PM.html" style="height: 800px; width: 100%" id = "textArea"></iframe>
+</div>
 
-<!-- ExamQuery level here -->
-
-<iframe src="AM.html" style="height: 800px; width: 100%" id = "textArea"></iframe>
-
+<div id="Tokyo" class="tabcontent">
+    <iframe src="Contacts.html" style="height: 800px; width: 100%" id = "textArea"></iframe>
+</div>
 
 <script>
-  function loadPage(text){
-    document.getElementById("textArea").src = text
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-
-  function Search_query(){
-    Search_query_Q()
-    Search_query_SQ()
-    Search_query_SSQ()
-    Search_query_SSSQ()
-    Search_query_EQ()
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-
-  function Search_query_Q() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("SearchBar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("QTable");
-  tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (matching(txtValue, filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  } 
-
-  function Search_query_SQ() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("SearchBar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("SQTable");
-  tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (matching(txtValue, filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  }
-
-  function Search_query_SSQ() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("SearchBar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("SSQTable");
-  tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (matching(txtValue, filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  }
-
-  function Search_query_SSSQ() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("SearchBar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("SSSQTable");
-  tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (matching(txtValue, filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  }
-
-  function Search_query_EQ() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("SearchBar");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("EQTable");
-  tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (matching(txtValue, filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  }
-
-  function searchtext(txt){
-  document.getElementById("SearchBar").value = txt;
-  Search_query();
-  }
-
-  function matching(str, patt1) {
-
-  patt1 = patt1.toUpperCase();
-  str = str.toUpperCase();
-  patt1 = textSplit(patt1);
-
-  var count_matches = 0;
-  var result = "";
-  var i;
-
-  for (i = 0; i < patt1.length; i++) {
-    if(str.indexOf(patt1[i]) > -1){
-      count_matches = count_matches + 1;
-    }
-  }
-
-  var str_split = textSplit(str);
-  var result = 0;
-
-  if(count_matches == Math.min(patt1.length, str_split.length)){result = 1;}else{result = -1;}
-
-  return result;
-
-  }
-
-  function textSplit(txt){
-    txt = txt.replace(/[.|&|,]/g," ");
-    txt = txt.replace(/\s+/g," ");
-    txt = txt.split(" ");
-    txt = txt.filter(onlyUnique);
-    return txt
-  }
-
-  function onlyUnique(value, index, self) { 
-    return self.indexOf(value) === index;
-  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
 </script>
-
-  
-
+   
 </body>
-</html>
+</html> 
