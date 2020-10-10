@@ -1,1 +1,402 @@
-<div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/2147714"><span style="color:gray;">Current local time in</span><br />Sydney, Australia</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=large&timezone=Australia%2FSydney" width="100%" height="140" frameborder="0" seamless></iframe> </div>
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+h2{font-family: "Helvetic", Arial, Helvetica;}
+
+#searchBar {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 1180px;
+  font-size: 12px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+
+}
+
+/* Scrol bar */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
+/* Button */
+.btnQ {
+  background-color: #204e6dec;
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 900px;
+  padding: 16px 32px;
+  text-align: left;
+  font-size: 11px;
+  margin: 4px 1px;
+  opacity: 0.7;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnQ:hover {opacity: 1}
+
+.btnT {
+  background-color: #10405c;
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 300px;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 13px;
+  margin: 4px 1px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnT:hover {opacity: 1}
+
+#QTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+
+#QTable td:nth-child(1) {
+    display: none;
+}
+
+b{font-size: 12px}
+
+</style>
+
+
+</head>
+
+
+
+
+
+<h2>2020 S1 Life Insurance Application - Wai Him Pun</h2>
+
+<table> 
+<tr>
+    <td>
+        <div style='overflow:auto; width:315px; height:350px;'>
+            <table id = "TTable">
+                <tr><td><button class="btnT" onclick = "searchtext('')">All</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Commercial')">Commercial</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Legislative')">Legislative</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Regulation')">Regulation</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Professional')">Professional</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Product')">Product Development</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Valuation ')">Valuation </button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Risk Management')">Risk Management</button></td></tr>
+                <tr><td><button class="btnT" onclick = "searchtext('Business planning')">Business planning</button></td></tr>
+                
+            </table>
+        </div>
+    </td>
+    <td>
+        <div style='overflow:auto; width:920px; height:350px;'>
+        <table id = "QTable">
+          <tr><td>Legislative, Life Act 1995</td><td><button class="btnQ" onclick = "searchtext('Legislative, Life Act 1995'); loadPage('Life Insurance Act 1995.htm')"><b>Life Insurance Act 1995</b><br>Tag: Legislative, Life Act 1995</button></td></tr>
+          <tr><td>Legislative, Life Act 1995, Life Policy, definition of life policy, Super, ordinary</td><td><button class="btnQ" onclick = "searchtext('Legislative, Life Act 1995, Life Policy, definition of life policy, Super, ordinary'); loadPage('Life Policy.htm')"><b>Life Policy</b><br>Tag: Legislative, Life Act 1995, Life Policy, definition of life policy, Super, ordinary</button></td></tr>
+          <tr><td>Legislative, Life Act 1995, Statutory Fund</td><td><button class="btnQ" onclick = "searchtext('Legislative, Life Act 1995, Statutory Fund'); loadPage('Statutory fund.htm')"><b>Statutory fund (LIA 1995 Part 4)</b><br>Tag: Legislative, Life Act 1995, Statutory Fund</button></td></tr>
+          <tr><td>Legislative, Life Act 1995, APRA, Board</td><td><button class="btnQ" onclick = "searchtext('Legislative, Life Act 1995, APRA, Board'); loadPage('APRA power under Life Insurance Act 1995.htm')"><b>APRA power under Life Insurance Act 1995</b><br>Tag: Legislative, Life Act 1995, APRA, Board</button></td></tr>
+          <tr><td>Legislative, Life Act 1995, APRA, Insolvency</td><td><button class="btnQ" onclick = "searchtext('Legislative, Life Act 1995, APRA, Insolvency'); loadPage('Life Act Sections relevant to insolvency.htm')"><b>Life Act Sections relevant to insolvency</b><br>Tag: Legislative, Life Act 1995, APRA, Insolvency</button></td></tr>
+          <tr><td>Legislative, Corporation Act 2001</td><td><button class="btnQ" onclick = "searchtext('Legislative, Corporation Act 2001'); loadPage('Corporation Act 2001.htm')"><b>Corporation Act 2001</b><br>Tag: Legislative, Corporation Act 2001</button></td></tr>
+          <tr><td>Legislative, ASIC, Life Insurance framework</td><td><button class="btnQ" onclick = "searchtext('Legislative, ASIC, Life Insurance framework'); loadPage('Life Insurance framework.htm')"><b>Life Insurance framework</b><br>Tag: Legislative, ASIC, Life Insurance framework</button></td></tr>
+          <tr><td>Legislative, Treasury Law Amendment</td><td><button class="btnQ" onclick = "searchtext('Legislative, Treasury Law Amendment'); loadPage('Treasury Law Amendment.htm')"><b>Treasury Law Amendment (design, distribution obligation, and product intervention power) act 2019</b><br>Tag: Legislative, Treasury Law Amendment</button></td></tr>
+          <tr><td>Legislative, Anti-discrimination laws</td><td><button class="btnQ" onclick = "searchtext('Legislative, Anti-discrimination laws'); loadPage('Anti.htm')"><b>Anti-discrimination laws</b><br>Tag: Legislative, Anti-discrimination laws</button></td></tr>
+          <tr><td>Legislative, Insurance contract Act 1984</td><td><button class="btnQ" onclick = "searchtext('Legislative, Insurance contract Act 1984'); loadPage('Insurance contract Act 1984.htm')"><b>Insurance contract Act 1984</b><br>Tag: Legislative, Insurance contract Act 1984</button></td></tr>
+          <tr><td>Legislative, Superannuation industry (supervision) act 1993, Stronger Super, Protect your super, Putting your member first</td><td><button class="btnQ" onclick = "searchtext('Legislative, Superannuation industry (supervision) act 1993, Stronger Super, Protect your super, Putting your member first'); loadPage('Superannuation industry.htm')"><b>Superannuation industry (supervision) act 1993</b><br>Tag: Legislative, Superannuation industry (supervision) act 1993, Stronger Super, Protect your super, Putting your member first</button></td></tr>
+          <tr><td>Legislative, Tax</td><td><button class="btnQ" onclick = "searchtext('Legislative, Tax'); loadPage('Taxation and product cycle.htm')"><b>Taxation and product cycle</b><br>Tag: Legislative, Tax</button></td></tr>
+          <tr><td>Legislative, Tax, Other tax</td><td><button class="btnQ" onclick = "searchtext('Legislative, Tax, Other tax'); loadPage('Indirect tax.htm')"><b>Indirect tax</b><br>Tag: Legislative, Tax, Other tax</button></td></tr>
+          <tr><td>Legislative, Tax, Imputation Credits, Australian Context, EV</td><td><button class="btnQ" onclick = "searchtext('Legislative, Tax, Imputation Credits, Australian Context, EV'); loadPage('Imputation credits.htm')"><b>Imputation credits</b><br>Tag: Legislative, Tax, Imputation Credits, Australian Context, EV</button></td></tr>
+          <tr><td>Regulation</td><td><button class="btnQ" onclick = "searchtext('Regulation'); loadPage('Regulation.htm')"><b>Regulation</b><br>Tag: Regulation</button></td></tr>
+          <tr><td>Regulation, APRA</td><td><button class="btnQ" onclick = "searchtext('Regulation, APRA'); loadPage('APRA.htm')"><b>APRA</b><br>Tag: Regulation, APRA</button></td></tr>
+          <tr><td>Regulation, APRA, CPS 320, Board</td><td><button class="btnQ" onclick = "searchtext('Regulation, APRA, CPS 320, Board'); loadPage('CPS 320 Actuarial advice and related matter under APRA.htm')"><b>CPS 320 Actuarial advice and related matter under APRA</b><br>Tag: Regulation, APRA, CPS 320, Board</button></td></tr>
+          <tr><td>Regulation, APRA, CPS 320, Actuarial Advice Framework, AAF</td><td><button class="btnQ" onclick = "searchtext('Regulation, APRA, CPS 320, Actuarial Advice Framework, AAF'); loadPage('Actuarial Advice Framework for.htm')"><b>Actuarial Advice Framework for (Product) under CPS 320</b><br>Tag: Regulation, APRA, CPS 320, Actuarial Advice Framework, AAF</button></td></tr>
+          <tr><td>Regulation, APRA, Actuarial Advice Framework, AAF, Principles, PS 201, CPS 320</td><td><button class="btnQ" onclick = "searchtext('Regulation, APRA, Actuarial Advice Framework, AAF, Principles, PS 201, CPS 320'); loadPage('Principle of the advice under Actuarial Advice Framework.htm')"><b>Principle of the advice under Actuarial Advice Framework</b><br>Tag: Regulation, APRA, Actuarial Advice Framework, AAF, Principles, PS 201, CPS 320</button></td></tr>
+          <tr><td>Regulation, APRA, Actuarial Advice Framework, AAF, Principles, Documentation</td><td><button class="btnQ" onclick = "searchtext('Regulation, APRA, Actuarial Advice Framework, AAF, Principles, Documentation'); loadPage('Principle of the advice documentation.htm')"><b>Principle of the advice documentation</b><br>Tag: Regulation, APRA, Actuarial Advice Framework, AAF, Principles, Documentation</button></td></tr>
+          <tr><td>Regulation, APRA, Supervision</td><td><button class="btnQ" onclick = "searchtext('Regulation, APRA, Supervision'); loadPage('APRA Supervision.htm')"><b>APRA Supervision</b><br>Tag: Regulation, APRA, Supervision</button></td></tr>
+          <tr><td>Regulation, ASIC</td><td><button class="btnQ" onclick = "searchtext('Regulation, ASIC'); loadPage('ASIC.htm')"><b>ASIC</b><br>Tag: Regulation, ASIC</button></td></tr>
+          <tr><td>Regulation, ASIC, Life Insurance Code of Practice</td><td><button class="btnQ" onclick = "searchtext('Regulation, ASIC, Life Insurance Code of Practice'); loadPage('Life Insurance code of practice.htm')"><b>Life Insurance code of practice</b><br>Tag: Regulation, ASIC, Life Insurance Code of Practice</button></td></tr>
+          <tr><td>Regulation, Commissions</td><td><button class="btnQ" onclick = "searchtext('Regulation, Commissions'); loadPage('Other Commission.htm')"><b>Other Commission</b><br>Tag: Regulation, Commissions</button></td></tr>
+          <tr><td>Professional, Appointed Actuary, CPS 320, PS 202, PS 201, CPS 520</td><td><button class="btnQ" onclick = "searchtext('Professional, Appointed Actuary, CPS 320, PS 202, PS 201, CPS 520'); loadPage('Appointed actuary.htm')"><b>Appointed actuary</b><br>Tag: Professional, Appointed Actuary, CPS 320, PS 202, PS 201, CPS 520</button></td></tr>
+          <tr><td>Professional, Actuarial Institute, Professional Standards, Board</td><td><button class="btnQ" onclick = "searchtext('Professional, Actuarial Institute, Professional Standards, Board'); loadPage('Professional responsibilities.htm')"><b>Professional responsibilities</b><br>Tag: Professional, Actuarial Institute, Professional Standards, Board</button></td></tr>
+          <tr><td>Professional, Actuarial Institute</td><td><button class="btnQ" onclick = "searchtext('Professional, Actuarial Institute'); loadPage('Actuarial Institute.htm')"><b>Actuarial Institute</b><br>Tag: Professional, Actuarial Institute</button></td></tr>
+          <tr><td>Professional, Actuarial Institute, Code of Conduct</td><td><button class="btnQ" onclick = "searchtext('Professional, Actuarial Institute, Code of Conduct'); loadPage('Code of Conduct.htm')"><b>Code of Conduct</b><br>Tag: Professional, Actuarial Institute, Code of Conduct</button></td></tr>
+          <tr><td>Professional, Audit</td><td><button class="btnQ" onclick = "searchtext('Professional, Audit'); loadPage('Auditor and actuary auditor.htm')"><b>Auditor and actuary auditor</b><br>Tag: Professional, Audit</button></td></tr>
+          <tr><td>Product Cycle</td><td><button class="btnQ" onclick = "searchtext('Product Cycle'); loadPage('Product Cycle.htm')"><b>Product Cycle</b><br>Tag: Product Cycle</button></td></tr>
+          <tr><td>Product, Professional, Audit, Appointed Actuary, Stakeholders</td><td><button class="btnQ" onclick = "searchtext('Product, Professional, Audit, Appointed Actuary, Stakeholders'); loadPage('Stakeholder in Product management.htm')"><b>Stakeholder in Product management</b><br>Tag: Product, Professional, Audit, Appointed Actuary, Stakeholders</button></td></tr>
+          <tr><td>Product, Assumptions</td><td><button class="btnQ" onclick = "searchtext('Product, Assumptions'); loadPage('Assumptions in Product cycle.htm')"><b>Assumptions in Product cycle</b><br>Tag: Product, Assumptions</button></td></tr>
+          <tr><td>Product, Assumptions, Mortality, Underwriting</td><td><button class="btnQ" onclick = "searchtext('Product, Assumptions, Mortality, Underwriting'); loadPage('Mortality under Australian Context.htm')"><b>Mortality under Australian Context</b><br>Tag: Product, Assumptions, Mortality, Underwriting</button></td></tr>
+          <tr><td>Product, Assumptions, Mortality, Disability income</td><td><button class="btnQ" onclick = "searchtext('Product, Assumptions, Mortality, Disability income'); loadPage('Morbidity under Australia Context in Product Cycle.htm')"><b>Morbidity under Australia Context in Product Cycle</b><br>Tag: Product, Assumptions, Mortality, Disability income</button></td></tr>
+          <tr><td>Product, Assumptions, Lapse</td><td><button class="btnQ" onclick = "searchtext('Product, Assumptions, Lapse'); loadPage('Lapse under Australia Context in Product Cycle.htm')"><b>Lapse under Australia Context in Product Cycle</b><br>Tag: Product, Assumptions, Lapse</button></td></tr>
+          <tr><td>Product, Profit testing, top-down, bottum up</td><td><button class="btnQ" onclick = "searchtext('Product, Profit testing, top-down, bottum up'); loadPage('Profit testing framework.htm')"><b>Profit testing framework</b><br>Tag: Product, Profit testing, top-down, bottum up</button></td></tr>
+          <tr><td>Product, Profit testing, Sensitivity Testing</td><td><button class="btnQ" onclick = "searchtext('Product, Profit testing, Sensitivity Testing'); loadPage('Sensitivity testing in Profit Testing.htm')"><b>Sensitivity testing in Profit Testing</b><br>Tag: Product, Profit testing, Sensitivity Testing</button></td></tr>
+          <tr><td>Product, underwriting and Claim</td><td><button class="btnQ" onclick = "searchtext('Product, underwriting and Claim'); loadPage('Underwriting and Claim in Product Cycle.htm')"><b>Underwriting and Claim in Product Cycle</b><br>Tag: Product, underwriting and Claim</button></td></tr>
+          <tr><td>Product, Retail, Lump sum, decline rates</td><td><button class="btnQ" onclick = "searchtext('Product, Retail, Lump sum, decline rates'); loadPage('Retail Lump Sum insurance in Product Cycle.htm')"><b>Retail Lump Sum insurance in Product Cycle</b><br>Tag: Product, Retail, Lump sum, decline rates</button></td></tr>
+          <tr><td>Product, Retail, Disability Income, APRA thematic review</td><td><button class="btnQ" onclick = "searchtext('Product, Retail, Disability Income, APRA thematic review'); loadPage('Retail disability income in Product Cycle.htm')"><b>Retail disability income in Product Cycle</b><br>Tag: Product, Retail, Disability Income, APRA thematic review</button></td></tr>
+          <tr><td>Product, direct business in practice, commission, conflicted renumeration, direct vs retail</td><td><button class="btnQ" onclick = "searchtext('Product, direct business in practice, commission, conflicted renumeration, direct vs retail'); loadPage('Direct business in Product Cycle.htm')"><b>Direct business in Product Cycle</b><br>Tag: Product, direct business in practice, commission, conflicted renumeration, direct vs retail</button></td></tr>
+          <tr><td>Product, Group Business, Protect Your Super Reform, Group business in practice, SIS, Continuation, SIS</td><td><button class="btnQ" onclick = "searchtext('Product, Group Business, Protect Your Super Reform, Group business in practice, SIS, Continuation, SIS'); loadPage('Group business in Product Cycle.htm')"><b>Group business in Product Cycle</b><br>Tag: Product, Group Business, Protect Your Super Reform, Group business in practice, SIS, Continuation, SIS</button></td></tr>
+          <tr><td>Product, Pricing Strategy, Group business</td><td><button class="btnQ" onclick = "searchtext('Product, Pricing Strategy, Group business'); loadPage('Pricing strategy.htm')"><b>Pricing strategy</b><br>Tag: Product, Pricing Strategy, Group business</button></td></tr>
+          <tr><td>Product, reinsurance, LPS 117, LPS 230</td><td><button class="btnQ" onclick = "searchtext('Product, reinsurance, LPS 117, LPS 230'); loadPage('Reinsurance in Product cycle.htm')"><b>Reinsurance in Product cycle</b><br>Tag: Product, reinsurance, LPS 117, LPS 230</button></td></tr>
+          <tr><td>product, unit pricing, unit pricing error</td><td><button class="btnQ" onclick = "searchtext('product, unit pricing, unit pricing error'); loadPage('Unit pricing.htm')"><b>Unit pricing</b><br>Tag: product, unit pricing, unit pricing error</button></td></tr>
+          <tr><td>product, unit pricing, Corporation Act 2001, Supervision Act 1993</td><td><button class="btnQ" onclick = "searchtext('product, unit pricing, Corporation Act 2001, Supervision Act 1993'); loadPage('Unit pricing error.htm')"><b>Unit pricing error</b><br>Tag: product, unit pricing, Corporation Act 2001, Supervision Act 1993</button></td></tr>
+          <tr><td>product, unit pricing, equity</td><td><button class="btnQ" onclick = "searchtext('product, unit pricing, equity'); loadPage('Unit pricing Equity issue.htm')"><b>Unit pricing Equity issue</b><br>Tag: product, unit pricing, equity</button></td></tr>
+          <tr><td>product, participating, Life insurance Act 1995, profit sharing</td><td><button class="btnQ" onclick = "searchtext('product, participating, Life insurance Act 1995, profit sharing'); loadPage('Participating business.htm')"><b>Participating business & Profit Sharing</b><br>Tag: product, participating, Life insurance Act 1995, profit sharing</button></td></tr>
+          <tr><td>product, participating, cost and benefit</td><td><button class="btnQ" onclick = "searchtext('product, participating, cost and benefit'); loadPage('Participating business cost and benefits to the company.htm')"><b>Participating business cost and benefits to the company</b><br>Tag: product, participating, cost and benefit</button></td></tr>
+          <tr><td>Product, Surrender value, LPS 360, Life Act 1995</td><td><button class="btnQ" onclick = "searchtext('Product, Surrender value, LPS 360, Life Act 1995'); loadPage('Surrender value.htm')"><b>Surrender value (minimum surrender value)</b><br>Tag: Product, Surrender value, LPS 360, Life Act 1995</button></td></tr>
+          <tr><td>product, on-going monitoring, and management</td><td><button class="btnQ" onclick = "searchtext('product, on-going monitoring, and management'); loadPage('On.htm')"><b>On-going monitoring and management in practice</b><br>Tag: product, on-going monitoring, and management</button></td></tr>
+          <tr><td>Product, Data Analytic</td><td><button class="btnQ" onclick = "searchtext('Product, Data Analytic'); loadPage('Data analytic.htm')"><b>Data analytic</b><br>Tag: Product, Data Analytic</button></td></tr>
+          <tr><td>Valuation</td><td><button class="btnQ" onclick = "searchtext('Valuation'); loadPage('Valuation.htm')"><b>Valuation</b><br>Tag: Valuation</button></td></tr>
+          <tr><td>Valuation Assumption setting, Valuation</td><td><button class="btnQ" onclick = "searchtext('Valuation Assumption setting, Valuation'); loadPage('Assumption setting in Valuation.htm')"><b>Assumption setting in Valuation </b><br>Tag: Valuation Assumption setting, Valuation</button></td></tr>
+          <tr><td>Valuation, Policy Liability</td><td><button class="btnQ" onclick = "searchtext('Valuation, Policy Liability'); loadPage('Valuation of policy liability.htm')"><b>Valuation of policy liability</b><br>Tag: Valuation, Policy Liability</button></td></tr>
+          <tr><td>Valuation, LPS 340, Governance of LPS 340</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Governance of LPS 340'); loadPage('LPS 340 Governance.htm')"><b>LPS 340 Governance</b><br>Tag: Valuation, LPS 340, Governance of LPS 340</button></td></tr>
+          <tr><td>Valuation, LPS 340, definition, sub-category, related product groups, RPG</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, definition, sub-category, related product groups, RPG'); loadPage('LPS 340.htm')"><b>LPS 340: Life insurance business definition</b><br>Tag: Valuation, LPS 340, definition, sub-category, related product groups, RPG</button></td></tr>
+          <tr><td>Valuation, LPS 340, Principles</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Principles'); loadPage('LPS 3401.htm')"><b>LPS 340: Principle of valuations</b><br>Tag: Valuation, LPS 340, Principles</button></td></tr>
+          <tr><td>Valuation, LPS 340, BE</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, BE'); loadPage('Best estimate Liability under LPS 340.htm')"><b>Best estimate Liability under LPS 340</b><br>Tag: Valuation, LPS 340, BE</button></td></tr>
+          <tr><td>Valuation, LPS 340, Profit Carrier, Proft Margin, MoS</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Profit Carrier, Proft Margin, MoS'); loadPage('Profit carrier and profit margin under LPS 340.htm')"><b>Profit carrier and profit margin under LPS 340</b><br>Tag: Valuation, LPS 340, Profit Carrier, Proft Margin, MoS</button></td></tr>
+          <tr><td>Valuation, LPS 340, Profit Carrier, Selection</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Profit Carrier, Selection'); loadPage('Selection of Profit Carrier.htm')"><b>Selection of Profit Carrier</b><br>Tag: Valuation, LPS 340, Profit Carrier, Selection</button></td></tr>
+          <tr><td>Valuation, LPS 340, Assumption changes</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Assumption changes'); loadPage('BE assumption changes under LPS 340.htm')"><b>BE assumption changes under LPS 340</b><br>Tag: Valuation, LPS 340, Assumption changes</button></td></tr>
+          <tr><td>Valuation, LPS 340, Expense assumptions</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Expense assumptions'); loadPage('Expense under LPS 340.htm')"><b>Expense under LPS 340</b><br>Tag: Valuation, LPS 340, Expense assumptions</button></td></tr>
+          <tr><td>Valuation, LPS 340, New business, NB</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, New business, NB'); loadPage('New Business under LPS 340.htm')"><b>New Business under LPS 340</b><br>Tag: Valuation, LPS 340, New business, NB</button></td></tr>
+          <tr><td>Valuation, LPS 340, Loss Recognition</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Loss Recognition'); loadPage('Loss recognition under LPS 340.htm')"><b>Loss recognition under LPS 340</b><br>Tag: Valuation, LPS 340, Loss Recognition</button></td></tr>
+          <tr><td>Valuation, LPS 340, Reinsurance</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Reinsurance'); loadPage('Reinsurance under LPS 340.htm')"><b>Reinsurance under LPS 340</b><br>Tag: Valuation, LPS 340, Reinsurance</button></td></tr>
+          <tr><td>Valuation, LPS 340, Incurred Claim Reserve</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Incurred Claim Reserve'); loadPage('Claim reserve under LPS 340.htm')"><b>Claim reserve under LPS 340</b><br>Tag: Valuation, LPS 340, Incurred Claim Reserve</button></td></tr>
+          <tr><td>Valuation, LPS 340, Non-discretionary life insurance, Non-Par</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Non-discretionary life insurance, Non-Par'); loadPage('Non.htm')"><b>Non-discretionary life insurance – projection method (non-par)</b><br>Tag: Valuation, LPS 340, Non-discretionary life insurance, Non-Par</button></td></tr>
+          <tr><td>Valuation, LPS 340, Participating business, Life Insurance Act 1995</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Participating business, Life Insurance Act 1995'); loadPage('Life contract.htm')"><b>Life contract – Participating</b><br>Tag: Valuation, LPS 340, Participating business, Life Insurance Act 1995</button></td></tr>
+          <tr><td>Valuation, LPS 340, Non-Par life business with discretionary action, Life Investment Contract</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Non-Par life business with discretionary action, Life Investment Contract'); loadPage('Non1.htm')"><b>Non-Par life business with discretionary action</b><br>Tag: Valuation, LPS 340, Non-Par life business with discretionary action, Life Investment Contract</button></td></tr>
+          <tr><td>Valuation, LPS 340, Life Investment Contract</td><td><button class="btnQ" onclick = "searchtext('Valuation, LPS 340, Life Investment Contract'); loadPage('Investment contracts under LPS 340.htm')"><b>Investment contracts under LPS 340</b><br>Tag: Valuation, LPS 340, Life Investment Contract</button></td></tr>
+          <tr><td>Valuation, APRA, Prudential Standards</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, Prudential Standards'); loadPage('Regulatory capital Overview.htm')"><b>Regulatory capital Overview</b><br>Tag: Valuation, APRA, Prudential Standards</button></td></tr>
+          <tr><td>Valuation, APRA, 3 Pillar</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, 3 Pillar'); loadPage('APRA1.htm')"><b>APRA’s 3 pillar of supervision</b><br>Tag: Valuation, APRA, 3 Pillar</button></td></tr>
+          <tr><td>Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement'); loadPage('Capital base.htm')"><b>Capital base (LPS 110) and measurement (LPS 112)</b><br>Tag: Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement</button></td></tr>
+          <tr><td>Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement, Adjusted Policy Liability</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement, Adjusted Policy Liability'); loadPage('Adjusted policy liabilities.htm')"><b>Adjusted policy liabilities</b><br>Tag: Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement, Adjusted Policy Liability</button></td></tr>
+          <tr><td>Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement, Adjusted Policy Liability, LPS 360, Minimum Surrender Value</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement, Adjusted Policy Liability, LPS 360, Minimum Surrender Value'); loadPage('LPS 360 minimum surrender value.htm')"><b>LPS 360 minimum surrender value</b><br>Tag: Valuation, APRA, LPS 110, LPS 112, Capital Base, Measurement, Adjusted Policy Liability, LPS 360, Minimum Surrender Value</button></td></tr>
+          <tr><td>Valuation, APRA, PCA</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, PCA'); loadPage('PCA.htm')"><b>PCA</b><br>Tag: Valuation, APRA, PCA</button></td></tr>
+          <tr><td>Valuation, APRA, PCA, Asset Risk Charge, LPS 114</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, PCA, Asset Risk Charge, LPS 114'); loadPage('LPS 114 Asset Risk charge.htm')"><b>LPS 114 Asset Risk charge</b><br>Tag: Valuation, APRA, PCA, Asset Risk Charge, LPS 114</button></td></tr>
+          <tr><td>Valuation, APRA, PCA, Insurance Risk Charge, LPS 115</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, PCA, Insurance Risk Charge, LPS 115'); loadPage('LPS 115 Insurance Risk Charge.htm')"><b>LPS 115 Insurance Risk Charge</b><br>Tag: Valuation, APRA, PCA, Insurance Risk Charge, LPS 115</button></td></tr>
+          <tr><td>Valuation, APRA, PCA, Asset Concentration Risk Charge, LPS 117</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, PCA, Asset Concentration Risk Charge, LPS 117'); loadPage('LPS 117 Asset Concentration Risk Charge.htm')"><b>LPS 117 Asset Concentration Risk Charge</b><br>Tag: Valuation, APRA, PCA, Asset Concentration Risk Charge, LPS 117</button></td></tr>
+          <tr><td>Valuation, APRA, PCA, Operating Risk Charge, LPS 118</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, PCA, Operating Risk Charge, LPS 118'); loadPage('LPS 118 Operating Risk Charge.htm')"><b>LPS 118 Operating Risk Charge</b><br>Tag: Valuation, APRA, PCA, Operating Risk Charge, LPS 118</button></td></tr>
+          <tr><td>Valuation, APRA, PCA, Aggregation and combined stress</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, PCA, Aggregation and combined stress'); loadPage('Aggregation and combined stress.htm')"><b>Aggregation and combined stress</b><br>Tag: Valuation, APRA, PCA, Aggregation and combined stress</button></td></tr>
+          <tr><td>Valuation, APRA, Pillar 2, ICAAP, Supervisory Adjustment</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, Pillar 2, ICAAP, Supervisory Adjustment'); loadPage('Pillar 2.htm')"><b>Pillar 2</b><br>Tag: Valuation, APRA, Pillar 2, ICAAP, Supervisory Adjustment</button></td></tr>
+          <tr><td>Valuation, APRA, Pillar 3, Disclosure</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, Pillar 3, Disclosure'); loadPage('Pillar 3.htm')"><b>Pillar 3</b><br>Tag: Valuation, APRA, Pillar 3, Disclosure</button></td></tr>
+          <tr><td>Valuation, Reinsurance, LAGIC, Capital</td><td><button class="btnQ" onclick = "searchtext('Valuation, Reinsurance, LAGIC, Capital'); loadPage('Reinsurance.htm')"><b>Reinsurance</b><br>Tag: Valuation, Reinsurance, LAGIC, Capital</button></td></tr>
+          <tr><td>Valuation, EV, AV</td><td><button class="btnQ" onclick = "searchtext('Valuation, EV, AV'); loadPage('Embedded value and appraisal value.htm')"><b>Embedded value and appraisal value</b><br>Tag: Valuation, EV, AV</button></td></tr>
+          <tr><td>Valuation, EV, AV, AoM</td><td><button class="btnQ" onclick = "searchtext('Valuation, EV, AV, AoM'); loadPage('Analysis of change in EV.htm')"><b>Analysis of change in EV</b><br>Tag: Valuation, EV, AV, AoM</button></td></tr>
+          <tr><td>Valuation, EV, AV, MoS, LPS 340</td><td><button class="btnQ" onclick = "searchtext('Valuation, EV, AV, MoS, LPS 340'); loadPage('Difference between EV reporting and MoS.htm')"><b>Difference between EV reporting and MoS</b><br>Tag: Valuation, EV, AV, MoS, LPS 340</button></td></tr>
+          <tr><td>Valuation, EV, AV, Product, Pricing metric</td><td><button class="btnQ" onclick = "searchtext('Valuation, EV, AV, Product, Pricing metric'); loadPage('VoNB margin.htm')"><b>VoNB margin</b><br>Tag: Valuation, EV, AV, Product, Pricing metric</button></td></tr>
+          <tr><td>Valuation, Financial Statement, Life Insurance Act View</td><td><button class="btnQ" onclick = "searchtext('Valuation, Financial Statement, Life Insurance Act View'); loadPage('Financial statement.htm')"><b>Financial statement </b><br>Tag: Valuation, Financial Statement, Life Insurance Act View</button></td></tr>
+          <tr><td>Valuation, Financial Statement, P&L, Profit and Loss Statement</td><td><button class="btnQ" onclick = "searchtext('Valuation, Financial Statement, P&L, Profit and Loss Statement'); loadPage('Profit and Loss statement.htm')"><b>Profit and Loss statement</b><br>Tag: Valuation, Financial Statement, P&L, Profit and Loss Statement</button></td></tr>
+          <tr><td>Valuation, Financial Statement, IFRS Balance Sheet</td><td><button class="btnQ" onclick = "searchtext('Valuation, Financial Statement, IFRS Balance Sheet'); loadPage('IFRS Balance sheet.htm')"><b>IFRS Balance sheet</b><br>Tag: Valuation, Financial Statement, IFRS Balance Sheet</button></td></tr>
+          <tr><td>Valuation, Financial Statement, Additional Note</td><td><button class="btnQ" onclick = "searchtext('Valuation, Financial Statement, Additional Note'); loadPage('Additional notes to financial statement.htm')"><b>Additional notes to financial statement</b><br>Tag: Valuation, Financial Statement, Additional Note</button></td></tr>
+          <tr><td>Valuation, APRA, Life Reporting Form, Appointed Actuary, Collection of Data</td><td><button class="btnQ" onclick = "searchtext('Valuation, APRA, Life Reporting Form, Appointed Actuary, Collection of Data'); loadPage('APRA Life Reporting form in practice.htm')"><b>APRA Life Reporting form in practice</b><br>Tag: Valuation, APRA, Life Reporting Form, Appointed Actuary, Collection of Data</button></td></tr>
+          <tr><td>Valuation, AoM, Australia</td><td><button class="btnQ" onclick = "searchtext('Valuation, AoM, Australia'); loadPage('Analysis of profit under Australian context.htm')"><b>Analysis of profit under Australian context</b><br>Tag: Valuation, AoM, Australia</button></td></tr>
+          <tr><td>Valuation, Actuarial Valuation report, Appointed Actuary, CPS 320</td><td><button class="btnQ" onclick = "searchtext('Valuation, Actuarial Valuation report, Appointed Actuary, CPS 320'); loadPage('Actuarial Valuation report.htm')"><b>Actuarial Valuation report</b><br>Tag: Valuation, Actuarial Valuation report, Appointed Actuary, CPS 320</button></td></tr>
+          <tr><td>Risk Management</td><td><button class="btnQ" onclick = "searchtext('Risk Management'); loadPage('Risk management.htm')"><b>Risk management</b><br>Tag: Risk Management</button></td></tr>
+          <tr><td>Risk Management, Risk Management in Australian Context</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Risk Management in Australian Context'); loadPage('Risk management framework in Australia context.htm')"><b>Risk management framework in Australia context</b><br>Tag: Risk Management, Risk Management in Australian Context</button></td></tr>
+          <tr><td>Risk Management, Risk Management in Australian Context, CPS 320, Prudential Standard</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Risk Management in Australian Context, CPS 320, Prudential Standard'); loadPage('Risk management framework in Australia contex1.htm')"><b>Risk management framework in Australia context: CPS 220 Risk Management framework </b><br>Tag: Risk Management, Risk Management in Australian Context, CPS 320, Prudential Standard</button></td></tr>
+          <tr><td>Risk Management, Risk Management in Australian Context, CPS 320, Professional Standard</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Risk Management in Australian Context, CPS 320, Professional Standard'); loadPage('Risk management framework in Australia contex2.htm')"><b>Risk management framework in Australia context: Professional Guidance from Actuarial Institute</b><br>Tag: Risk Management, Risk Management in Australian Context, CPS 320, Professional Standard</button></td></tr>
+          <tr><td>Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP'); loadPage('Internal Capital Adequacy Assessment Process.htm')"><b>Internal Capital Adequacy Assessment Process</b><br>Tag: Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP</button></td></tr>
+          <tr><td>Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP, Target Capital, CPG 110, Professional Standard</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP, Target Capital, CPG 110, Professional Standard'); loadPage('Target capital.htm')"><b>Target capital</b><br>Tag: Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP, Target Capital, CPG 110, Professional Standard</button></td></tr>
+          <tr><td>Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP, Allocation of Capital</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP, Allocation of Capital'); loadPage('Allocation of capital.htm')"><b>Allocation of capital</b><br>Tag: Risk Management, Risk Management in Australian Context, Pillar 2, ICAAP, Allocation of Capital</button></td></tr>
+          <tr><td>Risk Management, Valuation, FCR, CPS 320, PS 102</td><td><button class="btnQ" onclick = "searchtext('Risk Management, Valuation, FCR, CPS 320, PS 102'); loadPage('Financial condition report.htm')"><b>Financial condition report (FCR)</b><br>Tag: Risk Management, Valuation, FCR, CPS 320, PS 102</button></td></tr>
+          <tr><td>Business planning, CPS 220, Actuary</td><td><button class="btnQ" onclick = "searchtext('Business planning, CPS 220, Actuary'); loadPage('Business planning.htm')"><b>Business planning</b><br>Tag: Business planning, CPS 220, Actuary</button></td></tr>
+          <tr><td>Product Cycle, Considerations, Mind map</td><td><button class="btnQ" onclick = "searchtext('Product Cycle, Considerations, Mind map'); loadPage('Mind Map of New Product Considerations.htm')"><b>Mind Map of New Product Considerations</b><br>Tag: Product Cycle, Considerations, Mind map</button></td></tr>
+          <tr><td>Product, Customer view, Mind map</td><td><button class="btnQ" onclick = "searchtext('Product, Customer view, Mind map'); loadPage('Customer view.htm')"><b>Customer view</b><br>Tag: Product, Customer view, Mind map</button></td></tr>
+          <tr><td>Product, Provider view, Mind map</td><td><button class="btnQ" onclick = "searchtext('Product, Provider view, Mind map'); loadPage('Provide view.htm')"><b>Provide view</b><br>Tag: Product, Provider view, Mind map</button></td></tr>
+          <tr><td>Product, Assumptions, Mind map</td><td><button class="btnQ" onclick = "searchtext('Product, Assumptions, Mind map'); loadPage('Assumption in Product Cycle.htm')"><b>Assumption in Product Cycle</b><br>Tag: Product, Assumptions, Mind map</button></td></tr>
+          <tr><td>Product, Environment, Stakeholders, Mind map</td><td><button class="btnQ" onclick = "searchtext('Product, Environment, Stakeholders, Mind map'); loadPage('Environment in Product Cycle.htm')"><b>Environment in Product Cycle</b><br>Tag: Product, Environment, Stakeholders, Mind map</button></td></tr>
+          <tr><td>Tag, Product Cycle, Mind map, Expense</td><td><button class="btnQ" onclick = "searchtext('Tag, Product Cycle, Mind map, Expense'); loadPage('Expense.htm')"><b>Expense</b><br>Tag, Product Cycle, Mind map, Expense</button></td></tr>
+          <tr><td>Product, Term insurance, analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Term insurance, analysis'); loadPage('Term insurance.htm')"><b>Term insurance</b><br>Tag: Product, Term insurance, analysis</button></td></tr>
+          <tr><td>Product, Analysis, Term insurance, decreasing analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Analysis, Term insurance, decreasing analysis'); loadPage('Term insuranc1.htm')"><b>Term insurance, decreasing</b><br>Tag: Product, Analysis, Term insurance, decreasing analysis</button></td></tr>
+          <tr><td>Product, Analysis, WoL, Whole of Life</td><td><button class="btnQ" onclick = "searchtext('Product, Analysis, WoL, Whole of Life'); loadPage('Whole of Life.htm')"><b>Whole of Life</b><br>Tag: Product, Analysis, WoL, Whole of Life</button></td></tr>
+          <tr><td>Product, Analysis, Income Protection, IP</td><td><button class="btnQ" onclick = "searchtext('Product, Analysis, Income Protection, IP'); loadPage('Income Protection.htm')"><b>Income Protection</b><br>Tag: Product, Analysis, Income Protection, IP</button></td></tr>
+          <tr><td>Product, CI, Critical Illness, Trauma, Lump Sum, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, CI, Critical Illness, Trauma, Lump Sum, Analysis'); loadPage('Critical Illness.htm')"><b>Critical Illness</b><br>Tag: Product, CI, Critical Illness, Trauma, Lump Sum, Analysis</button></td></tr>
+          <tr><td>Product, TPD, Trauma, Lump Sum, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, TPD, Trauma, Lump Sum, Analysis'); loadPage('Total and Permanent Disability.htm')"><b>Total and Permanent Disability</b><br>Tag: Product, TPD, Trauma, Lump Sum, Analysis</button></td></tr>
+          <tr><td>Product, Endowment, Lump Sum, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Endowment, Lump Sum, Analysis'); loadPage('Endowment.htm')"><b>Endowment</b><br>Tag: Product, Endowment, Lump Sum, Analysis</button></td></tr>
+          <tr><td>Product, Endowment, Lump Sum, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Endowment, Lump Sum, Analysis'); loadPage('Unit.htm')"><b>Unit-Link Product</b><br>Tag: Product, Endowment, Lump Sum, Analysis</button></td></tr>
+          <tr><td>Product, Investment Account, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Investment Account, Analysis'); loadPage('Investment Account.htm')"><b>Investment Account</b><br>Tag: Product, Investment Account, Analysis</button></td></tr>
+          <tr><td>Product, Par, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Par, Analysis'); loadPage('Participating.htm')"><b>Participating</b><br>Tag: Product, Par, Analysis</button></td></tr>
+          <tr><td>Product, Annuity, Lifetime, Immediate, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Annuity, Lifetime, Immediate, Analysis'); loadPage('Annuity.htm')"><b>Annuity</b><br>Tag: Product, Annuity, Lifetime, Immediate, Analysis</button></td></tr>
+          <tr><td>Product, Deferred Annuity, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Deferred Annuity, Analysis'); loadPage('Deferred Annuity.htm')"><b>Deferred Annuity</b><br>Tag: Product, Deferred Annuity, Analysis</button></td></tr>
+          <tr><td>Product, Allocated Annuity, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Allocated Annuity, Analysis'); loadPage('Allocated Annuity.htm')"><b>Allocated Annuity</b><br>Tag: Product, Allocated Annuity, Analysis</button></td></tr>
+          <tr><td>Product, Variable Annuity, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Variable Annuity, Analysis'); loadPage('Variable Annuity.htm')"><b>Variable Annuity</b><br>Tag: Product, Variable Annuity, Analysis</button></td></tr>
+          <tr><td>Product, Reversed mortgage, Analysis</td><td><button class="btnQ" onclick = "searchtext('Product, Reversed mortgage, Analysis'); loadPage('Reversed mortgage.htm')"><b>Reversed mortgage</b><br>Tag: Product, Reversed mortgage, Analysis</button></td></tr>
+          <tr><td>product, premium wavier rider</td><td><button class="btnQ" onclick = "searchtext('product, premium wavier rider'); loadPage('Premium wavier.htm')"><b>Premium wavier </b><br>Tag: product, premium wavier rider</button></td></tr>
+          <tr><td>Product, Direct Channel</td><td><button class="btnQ" onclick = "searchtext('Product, Direct Channel'); loadPage('Direct Insurance.htm')"><b>Direct Insurance</b><br>Tag: Product, Direct Channel</button></td></tr>
+          <tr><td>Product, Group business</td><td><button class="btnQ" onclick = "searchtext('Product, Group business'); loadPage('Group Insurance.htm')"><b>Group Insurance</b><br>Tag: Product, Group business</button></td></tr>
+          <tr><td>Product, product development process</td><td><button class="btnQ" onclick = "searchtext('Product, product development process'); loadPage('Design a product development process.htm')"><b>Design a product development process</b><br>Tag: Product, product development process</button></td></tr>
+          <tr><td>Product, product development process, identify need</td><td><button class="btnQ" onclick = "searchtext('Product, product development process, identify need'); loadPage('Design a product development proces1.htm')"><b>Design a product development process – identify need</b><br>Tag: Product, product development process, identify need</button></td></tr>
+          <tr><td>Product, product development process, initial, idea, Screening, Proposal</td><td><button class="btnQ" onclick = "searchtext('Product, product development process, initial, idea, Screening, Proposal'); loadPage('Design a product development proces2.htm')"><b>Design a product development process – initial steps</b><br>Tag: Product, product development process, initial, idea, Screening, Proposal</button></td></tr>
+          <tr><td>product considerations, product development process, Manufacturing</td><td><button class="btnQ" onclick = "searchtext('product considerations, product development process, Manufacturing'); loadPage('Product Considerations.htm')"><b>Product Considerations</b><br>Tag: product considerations, product development process, Manufacturing</button></td></tr>
+          <tr><td>product considerations, product development process, Distribution</td><td><button class="btnQ" onclick = "searchtext('product considerations, product development process, Distribution'); loadPage('Product Distribution.htm')"><b>Product Distribution</b><br>Tag: product considerations, product development process, Distribution</button></td></tr>
+          <tr><td>product, channels, distribution, risks</td><td><button class="btnQ" onclick = "searchtext('product, channels, distribution, risks'); loadPage('Risk of financial intermediaries.htm')"><b>Risk of financial intermediaries</b><br>Tag: product, channels, distribution, risks</button></td></tr>
+          <tr><td>product considerations, product development process, DC fund</td><td><button class="btnQ" onclick = "searchtext('product considerations, product development process, DC fund'); loadPage('Defined Contribution Fund.htm')"><b>Defined Contribution Fund</b><br>Tag: product considerations, product development process, DC fund</button></td></tr>
+          <tr><td>Product, Experience Study</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study'); loadPage('Experience Study.htm')"><b>Experience Study</b><br>Tag: Product, Experience Study</button></td></tr>
+          <tr><td>Product, Experience Study, Assumptions, Pricing</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Assumptions, Pricing'); loadPage('Experience Stud1.htm')"><b>Experience Study: Assumption</b><br>Tag: Product, Experience Study, Assumptions, Pricing</button></td></tr>
+          <tr><td>Product, Experience Study, Mortality</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Mortality'); loadPage('Experience Stud2.htm')"><b>Experience Study: Mortality</b><br>Tag: Product, Experience Study, Mortality</button></td></tr>
+          <tr><td>Product, Experience Study, Economic</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Economic'); loadPage('Experience Stud3.htm')"><b>Experience Study: Economic</b><br>Tag: Product, Experience Study, Economic</button></td></tr>
+          <tr><td>Product, Experience Study, Expense</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Expense'); loadPage('Experience Stud4.htm')"><b>Experience Study: Expense</b><br>Tag: Product, Experience Study, Expense</button></td></tr>
+          <tr><td>Product, Experience Study, Expense, Marginal</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Expense, Marginal'); loadPage('Experience Stud5.htm')"><b>Experience Study: Marginal Basis Expense</b><br>Tag: Product, Experience Study, Expense, Marginal</button></td></tr>
+          <tr><td>Product, Experience Study, Lapse</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Lapse'); loadPage('Experience Stud6.htm')"><b>Experience Study: Lapse</b><br>Tag: Product, Experience Study, Lapse</button></td></tr>
+          <tr><td>Product, Experience Study, Moribidity, DII, TPD, Trauma, IBNR</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Moribidity, DII, TPD, Trauma, IBNR'); loadPage('Experience Stud7.htm')"><b>Experience Study: Morbidity</b><br>Tag: Product, Experience Study, Moribidity, DII, TPD, Trauma, IBNR</button></td></tr>
+          <tr><td>Product, Experience Study, New business</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, New business'); loadPage('Experience Stud8.htm')"><b>Experience Study: New business</b><br>Tag: Product, Experience Study, New business</button></td></tr>
+          <tr><td>Product, Experience Study, Retirement Scheme, Membership</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, Retirement Scheme, Membership'); loadPage('Experience Stud9.htm')"><b>Experience Study: Membership</b><br>Tag: Product, Experience Study, Retirement Scheme, Membership</button></td></tr>
+          <tr><td>Product, Experience Study, risk management, recommendation</td><td><button class="btnQ" onclick = "searchtext('Product, Experience Study, risk management, recommendation'); loadPage('Responding to the experience.htm')"><b>Responding to the experience</b><br>Tag: Product, Experience Study, risk management, recommendation</button></td></tr>
+          <tr><td>product pricing</td><td><button class="btnQ" onclick = "searchtext('product pricing'); loadPage('Product pricing.htm')"><b>Product pricing</b><br>Tag: product pricing</button></td></tr>
+          <tr><td>product, pricing, profit measure, profit testing</td><td><button class="btnQ" onclick = "searchtext('product, pricing, profit measure, profit testing'); loadPage('Profit testing.htm')"><b>Profit testing</b><br>Tag: product, pricing, profit measure, profit testing</button></td></tr>
+          <tr><td>product, pricing, Surrender Value</td><td><button class="btnQ" onclick = "searchtext('product, pricing, Surrender Value'); loadPage('Surrender valu1.htm')"><b>Surrender value</b><br>Tag: product, pricing, Surrender Value</button></td></tr>
+          <tr><td>product, pricing, Surrender Value, Secondary market, paid-up</td><td><button class="btnQ" onclick = "searchtext('product, pricing, Surrender Value, Secondary market, paid-up'); loadPage('Secondary Market.htm')"><b>Secondary Market </b><br>Tag: product, pricing, Surrender Value, Secondary market, paid-up</button></td></tr>
+          <tr><td>Product, Claim, underwriting</td><td><button class="btnQ" onclick = "searchtext('Product, Claim, underwriting'); loadPage('Claims.htm')"><b>Claims & underwriting</b><br>Tag: Product, Claim, underwriting</button></td></tr>
+          <tr><td>Product, Claim, underwriting, medical underwriting, financial underwriting, AAL</td><td><button class="btnQ" onclick = "searchtext('Product, Claim, underwriting, medical underwriting, financial underwriting, AAL'); loadPage('Underwriting Control cycle.htm')"><b>Underwriting Control cycle</b><br>Tag: Product, Claim, underwriting, medical underwriting, financial underwriting, AAL</button></td></tr>
+          <tr><td>Product, claims, disability income, claim management, disability income</td><td><button class="btnQ" onclick = "searchtext('Product, claims, disability income, claim management, disability income'); loadPage('Claim management processes.htm')"><b>Claim management processes</b><br>Tag: Product, claims, disability income, claim management, disability income</button></td></tr>
+          <tr><td>product, reinsurance</td><td><button class="btnQ" onclick = "searchtext('product, reinsurance'); loadPage('Reinsurance in product cycl1.htm')"><b>Reinsurance in product cycle</b><br>Tag: product, reinsurance</button></td></tr>
+          <tr><td>product, reinsurance, reinsurance types</td><td><button class="btnQ" onclick = "searchtext('product, reinsurance, reinsurance types'); loadPage('Agreement types of Reinsurance.htm')"><b>Agreement types of Reinsurance</b><br>Tag: product, reinsurance, reinsurance types</button></td></tr>
+          <tr><td>product, reinsurance, non-proportional risk, Cat Re, Catastrophe insurance, Stop Loss</td><td><button class="btnQ" onclick = "searchtext('product, reinsurance, non-proportional risk, Cat Re, Catastrophe insurance, Stop Loss'); loadPage('Non2.htm')"><b>Non-proportional risk</b><br>Tag: product, reinsurance, non-proportional risk, Cat Re, Catastrophe insurance, Stop Loss</button></td></tr>
+          <tr><td>product, reinsurance, Considerations, Disability, Annuity, Group</td><td><button class="btnQ" onclick = "searchtext('product, reinsurance, Considerations, Disability, Annuity, Group'); loadPage('Considerations of reinsurance.htm')"><b>Considerations of reinsurance</b><br>Tag: product, reinsurance, Considerations, Disability, Annuity, Group</button></td></tr>
+          <tr><td>product, reinsurance, Considerations, Profit Sharing, Fin Re, Financial Reinsurance</td><td><button class="btnQ" onclick = "searchtext('product, reinsurance, Considerations, Profit Sharing, Fin Re, Financial Reinsurance'); loadPage('Reinsurance profit sharing.htm')"><b>Reinsurance profit sharing</b><br>Tag: product, reinsurance, Considerations, Profit Sharing, Fin Re, Financial Reinsurance</button></td></tr>
+          <tr><td>product, reinsurance, Considerations, Risk, Direct</td><td><button class="btnQ" onclick = "searchtext('product, reinsurance, Considerations, Risk, Direct'); loadPage('Risk from the reinsurance.htm')"><b>Risk from the reinsurance</b><br>Tag: product, reinsurance, Considerations, Risk, Direct</button></td></tr>
+          <tr><td>Product, Unit Management</td><td><button class="btnQ" onclick = "searchtext('Product, Unit Management'); loadPage('Unit management.htm')"><b>Unit management</b><br>Tag: Product, Unit Management</button></td></tr>
+          <tr><td>Product, Unit Management, Historical vs forward price</td><td><button class="btnQ" onclick = "searchtext('Product, Unit Management, Historical vs forward price'); loadPage('Historical vs forward price.htm')"><b>Historical vs forward price</b><br>Tag: Product, Unit Management, Historical vs forward price</button></td></tr>
+          <tr><td>Product, Unit Management, Realised Gain/Loss, Unrealised</td><td><button class="btnQ" onclick = "searchtext('Product, Unit Management, Realised Gain/Loss, Unrealised'); loadPage('Realised gain.htm')"><b>Realised gain/unrealized gain loss</b><br>Tag: Product, Unit Management, Realised Gain/Loss, Unrealised</button></td></tr>
+          <tr><td>Product, Unit Management, Components</td><td><button class="btnQ" onclick = "searchtext('Product, Unit Management, Components'); loadPage('Components of Unit.htm')"><b>Components of Unit-Pricing</b><br>Tag: Product, Unit Management, Components</button></td></tr>
+          <tr><td>Product, Participating, Par</td><td><button class="btnQ" onclick = "searchtext('Product, Participating, Par'); loadPage('Participatin1.htm')"><b>Participating </b><br>Tag: Product, Participating, Par</button></td></tr>
+          <tr><td>Product, Participating, Structure of the bonus</td><td><button class="btnQ" onclick = "searchtext('Product, Participating, Structure of the bonus'); loadPage('Structure of the bonus.htm')"><b>Structure of the bonus</b><br>Tag: Product, Participating, Structure of the bonus</button></td></tr>
+          <tr><td>product, risk management, framework</td><td><button class="btnQ" onclick = "searchtext('product, risk management, framework'); loadPage('Risk management question.htm')"><b>Risk management question</b><br>Tag: product, risk management, framework</button></td></tr>
+          <tr><td>Pricing, FCR, Appointed Actuary, Professional, AAF, pandemics</td><td><button class="btnQ" onclick = "searchtext('Pricing, FCR, Appointed Actuary, Professional, AAF, pandemics'); loadPage('Pandemics.htm')"><b>Pandemics</b><br>Tag: Pricing, FCR, Appointed Actuary, Professional, AAF, pandemics</button></td></tr>
+          <tr><td>Pricing, FCR, Appointed Actuary, Professional, AAF, Pandemics, Assumptions</td><td><button class="btnQ" onclick = "searchtext('Pricing, FCR, Appointed Actuary, Professional, AAF, Pandemics, Assumptions'); loadPage('Pandemics and assumptions.htm')"><b>Pandemics Assumptions</b><br>Tag: Pricing, FCR, Appointed Actuary, Professional, AAF, Pandemics, Assumptions</button></td></tr>
+          <tr><td>M&A questions</td><td><button class="btnQ" onclick = "searchtext('M&A questions'); loadPage('M.htm')"><b>M&A questions</b><br>M&A questions</button></td></tr>
+          <tr><td>Pricing, FCR, Appointed Actuary, Professional, AAF, Pandemics, Assumptions, ICAAP</td><td><button class="btnQ" onclick = "searchtext('Pricing, FCR, Appointed Actuary, Professional, AAF, Pandemics, Assumptions, ICAAP'); loadPage('ICAAP during the pandemics.htm')"><b>ICAAP during the pandemics</b><br>Tag: Pricing, FCR, Appointed Actuary, Professional, AAF, Pandemics, Assumptions, ICAAP</button></td></tr>
+          
+
+
+        </table>
+        </div>
+    </td>
+</tr>
+</table>
+
+
+
+<p> Search for topics here.</p>
+<input type="text" id="searchBar" onkeydown = "Qquery()">
+<div><iframe src="Life Insurance Act 1995.htm" id = "textArea" width="1430px" height="500px"></iframe></div>
+
+
+
+<script>
+function loadPage(txt){
+  document.getElementById("textArea").src = txt;
+}
+
+function searchtext(txt){
+  document.getElementById("searchBar").value = txt;
+  Qquery();
+}
+
+/*
+function Tquery() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("searchBar");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("TTable");
+  tr = table.getElementsByTagName("tr");
+
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+} */
+
+function Qquery() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("searchBar");
+  filter = input.value;
+  table = document.getElementById("QTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (matching(filter,txtValue) == 1){
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function matching(key, tag){
+  var matched, i, matching_key, match_count
+  key = key.toUpperCase();
+  tag = tag.toUpperCase();
+  key = key.split(",")
+
+  match_count = 0
+  for (i = 0; i < key.length; i++){
+    matching_key = key[i].trim();
+    if(tag.indexOf(matching_key)> -1) {
+      match_count = match_count + 1;
+    }else{
+      match_count = match_count + 0;
+    }
+  }
+
+  if (match_count == key.length){
+      matched = 1}
+    else{
+      matched = 0
+    }
+  return matched
+}
+
+function test(){
+  alert(matching('Legislative, Life Act 1995', 'Legislative, Life Act 1995, Life Policy, definition of life policy'));
+}
+
+</script>
+
+</body>
+</html>
