@@ -5,7 +5,8 @@
 
 <style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-h2{font-family: "Helvetic", Arial, Helvetica;}
+
+h2{font-family: sans-serif;}
 
 #searchBar {
   background-position: 10px 10px;
@@ -47,7 +48,7 @@ h2{font-family: "Helvetic", Arial, Helvetica;}
   background-color: #204e6dec;
   border: none;
   color: rgb(255, 255, 255);
-  width: 1200px;
+  width: 100%;
   padding: 16px 32px;
   text-align: left;
   font-size: 18px;
@@ -65,7 +66,7 @@ h2{font-family: "Helvetic", Arial, Helvetica;}
   background-color: #0d2838;
   border: none;
   color: rgb(255, 255, 255);
-  width: 490px;
+  width: 100%;
   padding: 16px 32px;
   text-align: center;
   font-size: 18px;
@@ -113,13 +114,14 @@ b{font-size: 12px}
 
 </head>
 
-<h2>Dinsey Songs</h2>
+<h2>Disney Songs</h2>
 
-<audio controls autoplay id = "Audio"><source src="Songs/Listen Along! Bedtime Songs/01 This Little Bear.mp3" type="audio/ogg" id = "AudioSrc"> </audio>
+<audio controls autoplay id = "Audio" preload="auto" style="width:75vh;"><source src="Songs/Listen Along! Bedtime Songs/01 This Little Bear.mp3" type="audio/mpeg" id = "AudioSrc"> </audio>
+<input type="text" id="searchBar" onkeydown = "Qquery(); Squery();">
 <table> 
 <tr>
     <td>
-        <div style='overflow:auto; width:500px; height:750px;'>
+        <div style='overflow:auto; width:25vh; height:85vh;'>
             <table id = "TTable">
               <tr><td><button class="btnT" onclick = "searchtext('Listen Along! Bedtime Songs')">Listen Along! Bedtime Songs</button></td></tr>
               <tr><td><button class="btnT" onclick = "searchtext('Listen Along! Wake-Up Songs')">Listen Along! Wake-Up Songs</button></td></tr>
@@ -139,7 +141,7 @@ b{font-size: 12px}
         </div>
     </td>
     <td>
-        <div style='overflow:auto; width:1300px; height:750px;'>
+        <div style='overflow:auto; width:65vh; height:85vh;'>
         <table id = "QTable">
           <tr><td>Listen Along! Bedtime Songs</td><td><button class="btnQ" onclick = "searchtext('Listen Along! Bedtime Songs'); loadPage('Songs/Listen Along! Bedtime Songs/01 This Little Bear.mp3')">01 This Little Bear</button></td></tr>
           <tr><td>Listen Along! Bedtime Songs</td><td><button class="btnQ" onclick = "searchtext('Listen Along! Bedtime Songs'); loadPage('Songs/Listen Along! Bedtime Songs/02 The Sun Is Setting.mp3')">02 The Sun Is Setting</button></td></tr>
@@ -255,6 +257,16 @@ b{font-size: 12px}
           <tr><td>Sing Along! 1</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1'); loadPage('Songs/Sing Along! 1/38 Birthday Gifts.mp3')">38 Birthday Gifts</button></td></tr>
           <tr><td>Sing Along! 1</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1'); loadPage('Songs/Sing Along! 1/39 Mickey and His Friends.mp3')">39 Mickey and His Friends</button></td></tr>
           <tr><td>Sing Along! 1</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1'); loadPage('Songs/Sing Along! 1/40 Mickey and His Friends (Family Version).mp3')">40 Mickey and His Friends (Family Version)</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/01 Look Up! The Sun Is Shining.mp3')">01 Look Up! The Sun Is Shining</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/02 Let_s Go on a Picnic.mp3')">02 Let_s Go on a Picnic</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/03 We_re Packing a Picnic Basket.mp3')">03 We_re Packing a Picnic Basket</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/04 Away From The City.mp3')">04 Away From The City</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/05 Riding Down a Country Road.mp3')">05 Riding Down a Country Road</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/06 Green Means Go.mp3')">06 Green Means Go</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/07 I Like My Rooster.mp3')">07 I Like My Rooster</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/08 Lazy Gus.mp3')">08 Lazy Gus</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/09 Which Way-.mp3')">09 Which Way-</button></td></tr>
+          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/10 Where Is Your Right Hand-.mp3')">10 Where Is Your Right Hand-</button></td></tr>
           <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/11 We_re Going to Plant a Tree.mp3')">11 We_re Going to Plant a Tree</button></td></tr>
           <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/12 The Tree in the Hole.mp3')">12 The Tree in the Hole</button></td></tr>
           <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/13 Sitting in a Little Boat.mp3')">13 Sitting in a Little Boat</button></td></tr>
@@ -281,16 +293,13 @@ b{font-size: 12px}
           <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/34 Ooo, Ooo, Ooo.mp3')">34 Ooo, Ooo, Ooo</button></td></tr>
           <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/35 Eyes And Ears.mp3')">35 Eyes And Ears</button></td></tr>
           <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/36 This Was a Wonderful Picnic.mp3')">36 This Was a Wonderful Picnic</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/01 Look Up! The Sun Is Shining.mp3')">01 Look Up! The Sun Is Shining</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/02 Let_s Go on a Picnic.mp3')">02 Let_s Go on a Picnic</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/03 We_re Packing a Picnic Basket.mp3')">03 We_re Packing a Picnic Basket</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/04 Away From The City.mp3')">04 Away From The City</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/05 Riding Down a Country Road.mp3')">05 Riding Down a Country Road</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/06 Green Means Go.mp3')">06 Green Means Go</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/07 I Like My Rooster.mp3')">07 I Like My Rooster</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/08 Lazy Gus.mp3')">08 Lazy Gus</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/09 Which Way-.mp3')">09 Which Way-</button></td></tr>
-          <tr><td>Sing Along! 2</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2'); loadPage('Songs/Sing Along! 2/10 Where Is Your Right Hand-.mp3')">10 Where Is Your Right Hand-</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/01 The Painter_s Song.mp3')">01 The Painter_s Song</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/02 The Circus Train.mp3')">02 The Circus Train</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/03 Look at All the People!.mp3')">03 Look at All the People!</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/04 The Circus Band.mp3')">04 The Circus Band</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/05 What Should I Buy-.mp3')">05 What Should I Buy-</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/06 Step Right Up!.mp3')">06 Step Right Up!</button></td></tr>
+          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/07 The Hippopotamus.mp3')">07 The Hippopotamus</button></td></tr>
           <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/08 The Dancing Bears.mp3')">08 The Dancing Bears</button></td></tr>
           <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/09 The Little Circus Bear.mp3')">09 The Little Circus Bear</button></td></tr>
           <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/10 The Acrobats.mp3')">10 The Acrobats</button></td></tr>
@@ -308,13 +317,15 @@ b{font-size: 12px}
           <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/22 The Elephant and the Mouse.mp3')">22 The Elephant and the Mouse</button></td></tr>
           <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/23 The Lovely Ladies on Beautiful Horses.mp3')">23 The Lovely Ladies on Beautiful Horses</button></td></tr>
           <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/24 The Crazy Mixed-Up Circus.mp3')">24 The Crazy Mixed-Up Circus</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/01 The Painter_s Song.mp3')">01 The Painter_s Song</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/02 The Circus Train.mp3')">02 The Circus Train</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/03 Look at All the People!.mp3')">03 Look at All the People!</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/04 The Circus Band.mp3')">04 The Circus Band</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/05 What Should I Buy-.mp3')">05 What Should I Buy-</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/06 Step Right Up!.mp3')">06 Step Right Up!</button></td></tr>
-          <tr><td>Sing Along! 3</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3'); loadPage('Songs/Sing Along! 3/07 The Hippopotamus.mp3')">07 The Hippopotamus</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/01 The ABC Song.mp3')">01 The ABC Song</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/02 The Rooster_s Song.mp3')">02 The Rooster_s Song</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/03 The Alarm Clock Song.mp3')">03 The Alarm Clock Song</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/04 Every Morning.mp3')">04 Every Morning</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/05 When I Grow Up.mp3')">05 When I Grow Up</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/06 When You Are at the Zoo.mp3')">06 When You Are at the Zoo</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/07 Which Way-.mp3')">07 Which Way-</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/08 The Lion.mp3')">08 The Lion</button></td></tr>
+          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/09 The Tiger.mp3')">09 The Tiger</button></td></tr>
           <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/10 The Different Giraffe.mp3')">10 The Different Giraffe</button></td></tr>
           <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/11 The Zebra.mp3')">11 The Zebra</button></td></tr>
           <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/12 Five Funny Monkeys.mp3')">12 Five Funny Monkeys</button></td></tr>
@@ -337,15 +348,17 @@ b{font-size: 12px}
           <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/29 Mickey Told the Broom.mp3')">29 Mickey Told the Broom</button></td></tr>
           <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/30 Magic Is Easy.mp3')">30 Magic Is Easy</button></td></tr>
           <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/31 The March of the Brooms.mp3')">31 The March of the Brooms</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/01 The ABC Song.mp3')">01 The ABC Song</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/02 The Rooster_s Song.mp3')">02 The Rooster_s Song</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/03 The Alarm Clock Song.mp3')">03 The Alarm Clock Song</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/04 Every Morning.mp3')">04 Every Morning</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/05 When I Grow Up.mp3')">05 When I Grow Up</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/06 When You Are at the Zoo.mp3')">06 When You Are at the Zoo</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/07 Which Way-.mp3')">07 Which Way-</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/08 The Lion.mp3')">08 The Lion</button></td></tr>
-          <tr><td>Sing Along! 4</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4'); loadPage('Songs/Sing Along! 4/09 The Tiger.mp3')">09 The Tiger</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/01 What_s Your Name-.mp3')">01 What_s Your Name-</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/02 The Introduction Song.mp3')">02 The Introduction Song</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/03 What_s in Your Basket-.mp3')">03 What_s in Your Basket-</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/04 The ABC Song.mp3')">04 The ABC Song</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/05 Pluto_s Song.mp3')">05 Pluto_s Song</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/06 Mickey Magician.mp3')">06 Mickey Magician</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/07 Let_s Clap for Mickey.mp3')">07 Let_s Clap for Mickey</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/08 The Spelling Song.mp3')">08 The Spelling Song</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/09 The Thank You Song.mp3')">09 The Thank You Song</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/10 Huey, Dewey, and Louie.mp3')">10 Huey, Dewey, and Louie</button></td></tr>
+          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/11 Huey Takes a Red Balloon.mp3')">11 Huey Takes a Red Balloon</button></td></tr>
           <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/12 Goofy Is Sleeping in a Red Bed.mp3')">12 Goofy Is Sleeping in a Red Bed</button></td></tr>
           <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/13 Huey Is Sitting at the Table.mp3')">13 Huey Is Sitting at the Table</button></td></tr>
           <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/14 Look! Where- Over There!.mp3')">14 Look! Where- Over There!</button></td></tr>
@@ -374,17 +387,10 @@ b{font-size: 12px}
           <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/37 Birthday Gifts.mp3')">37 Birthday Gifts</button></td></tr>
           <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/38 Mickey and His Friends.mp3')">38 Mickey and His Friends</button></td></tr>
           <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/39 Mickey and His friends (Family Version).mp3')">39 Mickey and His friends (Family Version)</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/01 What_s Your Name-.mp3')">01 What_s Your Name-</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/02 The Introduction Song.mp3')">02 The Introduction Song</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/03 What_s in Your Basket-.mp3')">03 What_s in Your Basket-</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/04 The ABC Song.mp3')">04 The ABC Song</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/05 Pluto_s Song.mp3')">05 Pluto_s Song</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/06 Mickey Magician.mp3')">06 Mickey Magician</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/07 Let_s Clap for Mickey.mp3')">07 Let_s Clap for Mickey</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/08 The Spelling Song.mp3')">08 The Spelling Song</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/09 The Thank You Song.mp3')">09 The Thank You Song</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/10 Huey, Dewey, and Louie.mp3')">10 Huey, Dewey, and Louie</button></td></tr>
-          <tr><td>Sing Along! 1 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 1 Spoken Version'); loadPage('Songs/Sing Along! 1 Spoken Version/11 Huey Takes a Red Balloon.mp3')">11 Huey Takes a Red Balloon</button></td></tr>
+          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/01 Look Up! The Sun Is Shining.mp3')">01 Look Up! The Sun Is Shining</button></td></tr>
+          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/02 Let_s Go On A Picnic.mp3')">02 Let_s Go On A Picnic</button></td></tr>
+          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/03 We_re Packing A Picnic Basket.mp3')">03 We_re Packing A Picnic Basket</button></td></tr>
+          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/04 Away From The City.mp3')">04 Away From The City</button></td></tr>
           <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/05 Riding Down A Country Road.mp3')">05 Riding Down A Country Road</button></td></tr>
           <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/06 Green Is Go.mp3')">06 Green Is Go</button></td></tr>
           <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/07 I Like My Rooster.mp3')">07 I Like My Rooster</button></td></tr>
@@ -415,10 +421,13 @@ b{font-size: 12px}
           <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/32 The Baseball Song.mp3')">32 The Baseball Song</button></td></tr>
           <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/33 When The Sky Is Blue.mp3')">33 When The Sky Is Blue</button></td></tr>
           <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/34 Ooo, Ooo, Ooo.mp3')">34 Ooo, Ooo, Ooo</button></td></tr>
-          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/01 Look Up! The Sun Is Shining.mp3')">01 Look Up! The Sun Is Shining</button></td></tr>
-          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/02 Let_s Go On A Picnic.mp3')">02 Let_s Go On A Picnic</button></td></tr>
-          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/03 We_re Packing A Picnic Basket.mp3')">03 We_re Packing A Picnic Basket</button></td></tr>
-          <tr><td>Sing Along! 2 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 2 Spoken Version'); loadPage('Songs/Sing Along! 2 Spoken Version/04 Away From The City.mp3')">04 Away From The City</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/01 The Painter_s Song.mp3')">01 The Painter_s Song</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/02 The Circus Train.mp3')">02 The Circus Train</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/03 Look at All the People!.mp3')">03 Look at All the People!</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/04 The Circus Band.mp3')">04 The Circus Band</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/05 What Should I Buy-.mp3')">05 What Should I Buy-</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/06 Step Right Up!.mp3')">06 Step Right Up!</button></td></tr>
+          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/07 The Hippopotamus.mp3')">07 The Hippopotamus</button></td></tr>
           <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/08 The Dancing Bears.mp3')">08 The Dancing Bears</button></td></tr>
           <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/09 The Little Circus Bear.mp3')">09 The Little Circus Bear</button></td></tr>
           <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/10 The Acrobats.mp3')">10 The Acrobats</button></td></tr>
@@ -436,13 +445,12 @@ b{font-size: 12px}
           <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/22 The Elephant and the Mouse.mp3')">22 The Elephant and the Mouse</button></td></tr>
           <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/23 The Lovely Ladies on Beautiful Horses.mp3')">23 The Lovely Ladies on Beautiful Horses</button></td></tr>
           <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/24 The Crazy Mixed-Up Circus.mp3')">24 The Crazy Mixed-Up Circus</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/01 The Painter_s Song.mp3')">01 The Painter_s Song</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/02 The Circus Train.mp3')">02 The Circus Train</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/03 Look at All the People!.mp3')">03 Look at All the People!</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/04 The Circus Band.mp3')">04 The Circus Band</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/05 What Should I Buy-.mp3')">05 What Should I Buy-</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/06 Step Right Up!.mp3')">06 Step Right Up!</button></td></tr>
-          <tr><td>Sing Along! 3 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 3 Spoken Version'); loadPage('Songs/Sing Along! 3 Spoken Version/07 The Hippopotamus.mp3')">07 The Hippopotamus</button></td></tr>
+          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/01 The ABC Song.mp3')">01 The ABC Song</button></td></tr>
+          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/02 The Rooster_s Song.mp3')">02 The Rooster_s Song</button></td></tr>
+          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/03 The Alarm Clock Song.mp3')">03 The Alarm Clock Song</button></td></tr>
+          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/04 Every Morning.mp3')">04 Every Morning</button></td></tr>
+          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/05 When I Grow Up.mp3')">05 When I Grow Up</button></td></tr>
+          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/06 When You Are At The Zoo.mp3')">06 When You Are At The Zoo</button></td></tr>
           <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/07 Which Way-.mp3')">07 Which Way-</button></td></tr>
           <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/08 The Lion.mp3')">08 The Lion</button></td></tr>
           <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/09 The Tiger.mp3')">09 The Tiger</button></td></tr>
@@ -468,19 +476,13 @@ b{font-size: 12px}
           <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/29 Mickey Told The Broom.mp3')">29 Mickey Told The Broom</button></td></tr>
           <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/30 Magic Is Easy.mp3')">30 Magic Is Easy</button></td></tr>
           <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/31 The March Of The Brooms.mp3')">31 The March Of The Brooms</button></td></tr>
-          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/01 The ABC Song.mp3')">01 The ABC Song</button></td></tr>
-          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/02 The Rooster_s Song.mp3')">02 The Rooster_s Song</button></td></tr>
-          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/03 The Alarm Clock Song.mp3')">03 The Alarm Clock Song</button></td></tr>
-          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/04 Every Morning.mp3')">04 Every Morning</button></td></tr>
-          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/05 When I Grow Up.mp3')">05 When I Grow Up</button></td></tr>
-          <tr><td>Sing Along! 4 Spoken Version</td><td><button class="btnQ" onclick = "searchtext('Sing Along! 4 Spoken Version'); loadPage('Songs/Sing Along! 4 Spoken Version/06 When You Are At The Zoo.mp3')">06 When You Are At The Zoo</button></td></tr>
           
         </table>
         </div>
     </td>
 </tr>
 </table>
-<input type="text" id="searchBar" onkeydown = "Qquery(); Squery();">
+
 
 
 <script>
